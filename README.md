@@ -309,8 +309,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 For questions, suggestions, or collaboration opportunities:
 
 - **Project**: Food Security Jordan
-- **Repository**: [GitHub Link]
-- **Demo**: [Live Demo Link]
+- project link :https://pixelsuite.vercel.app/
+- 
 - **Documentation**: This README
 
 ---
