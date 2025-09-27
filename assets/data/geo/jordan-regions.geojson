@@ -1,0 +1,281 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amman Governorate",
+        "name_ar": "محافظة عمان",
+        "population": 4500000,
+        "area_km2": 8231,
+        "agricultural_area": 450,
+        "main_crops": ["Olives", "Vegetables", "Citrus"],
+        "water_sources": ["Treated wastewater", "Groundwater"],
+        "productivity_index": 0.72
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.8, 31.9],
+          [36.2, 31.9],
+          [36.2, 32.1],
+          [35.8, 32.1],
+          [35.8, 31.9]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Irbid Governorate",
+        "name_ar": "محافظة إربد",
+        "population": 1800000,
+        "area_km2": 1572,
+        "agricultural_area": 850,
+        "main_crops": ["Wheat", "Barley", "Olives", "Vegetables"],
+        "water_sources": ["Rainfall", "Yarmouk River", "Groundwater"],
+        "productivity_index": 0.85
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.6, 32.3],
+          [36.0, 32.3],
+          [36.0, 32.7],
+          [35.6, 32.7],
+          [35.6, 32.3]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jordan Valley",
+        "name_ar": "الأغوار الأردنية",
+        "population": 300000,
+        "area_km2": 1680,
+        "agricultural_area": 240,
+        "main_crops": ["Tomatoes", "Cucumbers", "Peppers", "Citrus", "Bananas"],
+        "water_sources": ["Jordan River", "King Abdullah Canal", "Treated wastewater"],
+        "productivity_index": 0.93
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.4, 31.5],
+          [35.8, 31.5],
+          [35.8, 32.6],
+          [35.4, 32.6],
+          [35.4, 31.5]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zarqa Governorate",
+        "name_ar": "محافظة الزرقاء",
+        "population": 1400000,
+        "area_km2": 4761,
+        "agricultural_area": 320,
+        "main_crops": ["Wheat", "Barley", "Olives"],
+        "water_sources": ["Groundwater", "Treated wastewater"],
+        "productivity_index": 0.65
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [36.0, 31.8],
+          [36.8, 31.8],
+          [36.8, 32.4],
+          [36.0, 32.4],
+          [36.0, 31.8]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Balqa Governorate",
+        "name_ar": "محافظة البلقاء",
+        "population": 550000,
+        "area_km2": 1076,
+        "agricultural_area": 400,
+        "main_crops": ["Olives", "Grapes", "Stone fruits", "Vegetables"],
+        "water_sources": ["Springs", "Groundwater", "Treated wastewater"],
+        "productivity_index": 0.78
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.6, 31.6],
+          [36.1, 31.6],
+          [36.1, 32.0],
+          [35.6, 32.0],
+          [35.6, 31.6]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karak Governorate",
+        "name_ar": "محافظة الكرك",
+        "population": 380000,
+        "area_km2": 3217,
+        "agricultural_area": 600,
+        "main_crops": ["Olives", "Wheat", "Lentils", "Vegetables"],
+        "water_sources": ["Groundwater", "Wala Dam", "Mujib Dam"],
+        "productivity_index": 0.71
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.4, 31.0],
+          [36.2, 31.0],
+          [36.2, 31.5],
+          [35.4, 31.5],
+          [35.4, 31.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tafilah Governorate",
+        "name_ar": "محافظة الطفيلة",
+        "population": 110000,
+        "area_km2": 2209,
+        "agricultural_area": 180,
+        "main_crops": ["Olives", "Almonds", "Apples", "Grapes"],
+        "water_sources": ["Springs", "Groundwater"],
+        "productivity_index": 0.68
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.3, 30.5],
+          [35.9, 30.5],
+          [35.9, 31.0],
+          [35.3, 31.0],
+          [35.3, 30.5]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ma'an Governorate",
+        "name_ar": "محافظة معان",
+        "population": 180000,
+        "area_km2": 32832,
+        "agricultural_area": 85,
+        "main_crops": ["Date palms", "Vegetables", "Forage crops"],
+        "water_sources": ["Fossil aquifers", "Treated wastewater"],
+        "productivity_index": 0.45
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.5, 29.8],
+          [37.2, 29.8],
+          [37.2, 31.2],
+          [35.5, 31.2],
+          [35.5, 29.8]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aqaba Governorate",
+        "name_ar": "محافظة العقبة",
+        "population": 200000,
+        "area_km2": 6905,
+        "agricultural_area": 25,
+        "main_crops": ["Date palms", "Vegetables", "Flowers"],
+        "water_sources": ["Desalinated water", "Groundwater"],
+        "productivity_index": 0.82
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [34.8, 29.3],
+          [35.5, 29.3],
+          [35.5, 30.0],
+          [34.8, 30.0],
+          [34.8, 29.3]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mafraq Governorate",
+        "name_ar": "محافظة المفرق",
+        "population": 650000,
+        "area_km2": 26551,
+        "agricultural_area": 1200,
+        "main_crops": ["Wheat", "Barley", "Olives", "Sheep grazing"],
+        "water_sources": ["Groundwater", "Rainfall"],
+        "productivity_index": 0.58
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [36.0, 32.0],
+          [38.0, 32.0],
+          [38.0, 33.0],
+          [36.0, 33.0],
+          [36.0, 32.0]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ajloun Governorate",
+        "name_ar": "محافظة عجلون",
+        "population": 200000,
+        "area_km2": 420,
+        "agricultural_area": 280,
+        "main_crops": ["Olives", "Grapes", "Stone fruits", "Forest products"],
+        "water_sources": ["Rainfall", "Springs", "Groundwater"],
+        "productivity_index": 0.88
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.6, 32.2],
+          [35.9, 32.2],
+          [35.9, 32.4],
+          [35.6, 32.4],
+          [35.6, 32.2]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jerash Governorate",
+        "name_ar": "محافظة جرش",
+        "population": 250000,
+        "area_km2": 402,
+        "agricultural_area": 310,
+        "main_crops": ["Olives", "Wheat", "Vegetables", "Fruit trees"],
+        "water_sources": ["Rainfall", "Groundwater", "King Talal Dam"],
+        "productivity_index": 0.81
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [35.8, 32.2],
+          [36.1, 32.2],
+          [36.1, 32.4],
+          [35.8, 32.4],
+          [35.8, 32.2]
+        ]]
+      }
+    }
+  ]
+}

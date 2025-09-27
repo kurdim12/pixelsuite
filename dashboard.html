@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Food Security Jordan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <meta name="description" content="Real-time analytics, trends, and insights for informed agricultural decision-making">
+    <meta name="theme-color" content="#226646">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link" role="menuitem">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link" role="menuitem">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link active" role="menuitem" aria-current="page">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link" role="menuitem">Suggestions</a></li>
+                </ul>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Dashboard Header -->
+        <section class="dashboard-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-text">
+                        <h1>Agricultural Dashboard</h1>
+                        <p>Real-time insights and analytics for Jordan's agricultural sector</p>
+                    </div>
+                    <div class="header-filters">
+                        <select class="filter-select" id="regionFilter">
+                            <option value="all">All Regions</option>
+                            <option value="jordan-valley">Jordan Valley</option>
+                            <option value="highlands">Highlands</option>
+                            <option value="desert">Desert Regions</option>
+                        </select>
+                        <select class="filter-select" id="timeFilter">
+                            <option value="7d">Last 7 Days</option>
+                            <option value="30d">Last 30 Days</option>
+                            <option value="90d">Last 3 Months</option>
+                            <option value="1y">Last Year</option>
+                        </select>
+                        <button class="refresh-btn" id="refreshData">
+                            <span class="refresh-icon">🔄</span>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="key-metrics">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-card production">
+                        <div class="metric-header">
+                            <h3>Total Production</h3>
+                            <span class="metric-trend up">+5.2%</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value" id="totalProduction">2,847,000</span>
+                            <span class="unit">tons</span>
+                        </div>
+                        <div class="metric-chart">
+                            <canvas id="productionChart" width="200" height="60"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="metric-card water">
+                        <div class="metric-header">
+                            <h3>Water Usage</h3>
+                            <span class="metric-trend down">-12.1%</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value" id="waterUsage">145.7</span>
+                            <span class="unit">million m³</span>
+                        </div>
+                        <div class="metric-chart">
+                            <canvas id="waterChart" width="200" height="60"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="metric-card efficiency">
+                        <div class="metric-header">
+                            <h3>Efficiency Rate</h3>
+                            <span class="metric-trend up">+8.4%</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value" id="efficiencyRate">78.3</span>
+                            <span class="unit">%</span>
+                        </div>
+                        <div class="metric-chart">
+                            <canvas id="efficiencyChart" width="200" height="60"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="metric-card farms">
+                        <div class="metric-header">
+                            <h3>Active Farms</h3>
+                            <span class="metric-trend up">+2.8%</span>
+                        </div>
+                        <div class="metric-value">
+                            <span class="value" id="activeFarms">12,450</span>
+                            <span class="unit">farms</span>
+                        </div>
+                        <div class="metric-chart">
+                            <canvas id="farmsChart" width="200" height="60"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <div class="container">
+                <div class="charts-grid">
+                    <!-- Production by Region Chart -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Production by Region</h3>
+                            <div class="chart-controls">
+                                <button class="chart-btn active" data-chart="production" data-type="bar">Bar</button>
+                                <button class="chart-btn" data-chart="production" data-type="pie">Pie</button>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="regionProductionChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Crop Types Distribution -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Crop Distribution</h3>
+                            <div class="chart-controls">
+                                <button class="chart-btn active" data-chart="crops" data-type="doughnut">Doughnut</button>
+                                <button class="chart-btn" data-chart="crops" data-type="bar">Bar</button>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="cropDistributionChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Water Usage Trends -->
+                    <div class="chart-container span-2">
+                        <div class="chart-header">
+                            <h3>Water Usage Trends</h3>
+                            <div class="chart-controls">
+                                <button class="chart-btn active" data-chart="water" data-type="line">Line</button>
+                                <button class="chart-btn" data-chart="water" data-type="area">Area</button>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="waterTrendsChart" width="800" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Seasonal Production -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Seasonal Production</h3>
+                            <div class="chart-legend">
+                                <span class="legend-item">
+                                    <span class="legend-color spring"></span>
+                                    Spring
+                                </span>
+                                <span class="legend-item">
+                                    <span class="legend-color summer"></span>
+                                    Summer
+                                </span>
+                                <span class="legend-item">
+                                    <span class="legend-color autumn"></span>
+                                    Autumn
+                                </span>
+                                <span class="legend-item">
+                                    <span class="legend-color winter"></span>
+                                    Winter
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="seasonalChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Disease Alerts -->
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Disease Alert Levels</h3>
+                            <div class="alert-summary">
+                                <span class="alert-count low">8 Low</span>
+                                <span class="alert-count medium">3 Medium</span>
+                                <span class="alert-count high">1 High</span>
+                            </div>
+                        </div>
+                        <div class="chart-content">
+                            <canvas id="diseaseAlertsChart" width="400" height="300"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Tables -->
+        <section class="data-tables">
+            <div class="container">
+                <div class="tables-grid">
+                    <!-- Top Performing Farms -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Top Performing Farms</h3>
+                            <button class="export-btn">Export</button>
+                        </div>
+                        <div class="table-content">
+                            <table class="data-table" id="topFarmsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Farm Name</th>
+                                        <th>Region</th>
+                                        <th>Yield (t/ha)</th>
+                                        <th>Efficiency</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Al-Zahra Farm</td>
+                                        <td>Jordan Valley</td>
+                                        <td>45.2</td>
+                                        <td class="efficiency high">95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Green Valley Co.</td>
+                                        <td>Irbid</td>
+                                        <td>42.8</td>
+                                        <td class="efficiency high">92%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Desert Bloom</td>
+                                        <td>Mafraq</td>
+                                        <td>38.6</td>
+                                        <td class="efficiency medium">88%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Jordan Organics</td>
+                                        <td>Balqa</td>
+                                        <td>35.4</td>
+                                        <td class="efficiency medium">85%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Modern Agriculture</td>
+                                        <td>Karak</td>
+                                        <td>33.2</td>
+                                        <td class="efficiency medium">82%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activities -->
+                    <div class="table-container">
+                        <div class="table-header">
+                            <h3>Recent Activities</h3>
+                            <button class="filter-btn" id="activityFilter">Filter</button>
+                        </div>
+                        <div class="table-content">
+                            <div class="activity-list" id="activityList">
+                                <div class="activity-item">
+                                    <div class="activity-icon irrigation">💧</div>
+                                    <div class="activity-content">
+                                        <span class="activity-title">Irrigation System Update</span>
+                                        <span class="activity-description">Al-Zahra Farm upgraded to smart drip irrigation</span>
+                                        <span class="activity-time">2 hours ago</span>
+                                    </div>
+                                    <span class="activity-status success">Completed</span>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon disease">🔬</div>
+                                    <div class="activity-content">
+                                        <span class="activity-title">Disease Alert</span>
+                                        <span class="activity-description">Powdery mildew detected in Jordan Valley region</span>
+                                        <span class="activity-time">4 hours ago</span>
+                                    </div>
+                                    <span class="activity-status warning">Alert</span>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon harvest">🌾</div>
+                                    <div class="activity-content">
+                                        <span class="activity-title">Harvest Completed</span>
+                                        <span class="activity-description">Green Valley Co. wheat harvest: 850 tons</span>
+                                        <span class="activity-time">6 hours ago</span>
+                                    </div>
+                                    <span class="activity-status success">Completed</span>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon planting">🌱</div>
+                                    <div class="activity-content">
+                                        <span class="activity-title">New Planting</span>
+                                        <span class="activity-description">Desert Bloom started tomato seedlings</span>
+                                        <span class="activity-time">8 hours ago</span>
+                                    </div>
+                                    <span class="activity-status in-progress">In Progress</span>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon weather">🌤️</div>
+                                    <div class="activity-content">
+                                        <span class="activity-title">Weather Update</span>
+                                        <span class="activity-description">Favorable conditions forecasted for next week</span>
+                                        <span class="activity-time">12 hours ago</span>
+                                    </div>
+                                    <span class="activity-status info">Info</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real-time Monitoring -->
+        <section class="realtime-monitoring">
+            <div class="container">
+                <h2 class="section-title">Real-time Monitoring</h2>
+                <div class="monitoring-grid">
+                    <div class="monitor-card weather">
+                        <div class="monitor-header">
+                            <h3>Weather Conditions</h3>
+                            <span class="last-update">Updated 5 min ago</span>
+                        </div>
+                        <div class="weather-current">
+                            <div class="weather-main">
+                                <span class="temperature">28°C</span>
+                                <span class="condition">Sunny</span>
+                            </div>
+                            <div class="weather-details">
+                                <div class="weather-item">
+                                    <span class="label">Humidity:</span>
+                                    <span class="value">45%</span>
+                                </div>
+                                <div class="weather-item">
+                                    <span class="label">Wind:</span>
+                                    <span class="value">12 km/h</span>
+                                </div>
+                                <div class="weather-item">
+                                    <span class="label">Pressure:</span>
+                                    <span class="value">1013 hPa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitor-card soil">
+                        <div class="monitor-header">
+                            <h3>Soil Conditions</h3>
+                            <span class="last-update">Updated 2 min ago</span>
+                        </div>
+                        <div class="soil-metrics">
+                            <div class="soil-metric">
+                                <span class="metric-name">Moisture</span>
+                                <div class="metric-bar">
+                                    <div class="bar-fill" style="width: 68%"></div>
+                                </div>
+                                <span class="metric-value">68%</span>
+                            </div>
+                            <div class="soil-metric">
+                                <span class="metric-name">pH Level</span>
+                                <div class="metric-bar">
+                                    <div class="bar-fill" style="width: 72%"></div>
+                                </div>
+                                <span class="metric-value">7.2</span>
+                            </div>
+                            <div class="soil-metric">
+                                <span class="metric-name">Temperature</span>
+                                <div class="metric-bar">
+                                    <div class="bar-fill" style="width: 55%"></div>
+                                </div>
+                                <span class="metric-value">22°C</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitor-card alerts">
+                        <div class="monitor-header">
+                            <h3>System Alerts</h3>
+                            <span class="alert-badge">3 Active</span>
+                        </div>
+                        <div class="alerts-list">
+                            <div class="alert-item medium">
+                                <div class="alert-icon">⚠️</div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Low Soil Moisture</span>
+                                    <span class="alert-location">Sector 7-B</span>
+                                </div>
+                                <span class="alert-time">10m</span>
+                            </div>
+                            <div class="alert-item low">
+                                <div class="alert-icon">ℹ️</div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Irrigation Scheduled</span>
+                                    <span class="alert-location">Sector 3-A</span>
+                                </div>
+                                <span class="alert-time">15m</span>
+                            </div>
+                            <div class="alert-item high">
+                                <div class="alert-icon">🚨</div>
+                                <div class="alert-content">
+                                    <span class="alert-title">Disease Detection</span>
+                                    <span class="alert-location">Greenhouse 5</span>
+                                </div>
+                                <span class="alert-time">25m</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>Advancing sustainable agriculture and food security across Jordan through innovation, collaboration, and data-driven insights.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="agriculture.html">Agriculture Systems</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Irrigation Methods</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.moa.gov.jo/">Ministry of Agriculture</a></li>
+                        <li><a href="https://www.mwi.gov.jo/">Jordan Valley Authority</a></li>
+                        <li><a href="https://www.narc.gov.jo/">Agricultural Research Centers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built with sustainability in mind</span>
+                        <span>•</span>
+                        <button class="footer-accessibility" aria-label="Accessibility options">Accessibility</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/dashboard.js"></script>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</body>
+</html>

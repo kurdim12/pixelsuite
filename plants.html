@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Native Plants - Food Security Jordan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <meta name="description" content="Discover Jordan's native plants, medicinal species, and exotic varieties for sustainable agriculture">
+    <meta name="theme-color" content="#2D7A4F">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+
+    <!-- OpenGraph Meta -->
+    <meta property="og:title" content="Jordan Native Plants - Food Security Jordan">
+    <meta property="og:description" content="Discover Jordan's native plants, medicinal species, and exotic varieties for sustainable agriculture">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Food Security Jordan">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jordan Native Plants - Food Security Jordan">
+    <meta name="twitter:description" content="Discover Jordan's native plants, medicinal species, and exotic varieties">
+</head>
+<body>
+    <!-- Skip to main content link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link" role="menuitem">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="plants.html" class="nav-link active" role="menuitem" aria-current="page">Plants</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link" role="menuitem">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link" role="menuitem">Suggestions</a></li>
+                </ul>
+
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Content Progress Badge -->
+    <div class="content-progress" aria-live="polite" aria-label="Reading progress">
+        <span class="progress-text">0%</span>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Page Header -->
+        <section class="page-header particle-container" aria-labelledby="page-title">
+            <div class="container">
+                <div class="page-header-content animate-slide-up">
+                    <h1 id="page-title" class="page-title">
+                        Jordan's <span class="highlight gradient-primary">Native Plants</span>
+                    </h1>
+                    <p class="page-subtitle animate-fade-in">
+                        Explore the rich biodiversity of Jordan's flora, from native species adapted to arid climates
+                        to medicinal plants used in traditional agriculture and healing practices.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section track" aria-labelledby="search-title">
+            <div class="container">
+                <div class="search-header glass-card">
+                    <h2 id="search-title" class="section-title">Plant Database</h2>
+                    <p class="section-subtitle">Search and discover Jordan's diverse plant species</p>
+
+                    <div class="search-controls">
+                        <div class="search-input-group">
+                            <label for="plant-search" class="sr-only">Search plants</label>
+                            <input
+                                type="text"
+                                id="plant-search"
+                                placeholder="Search plants by name, type, or use..."
+                                class="search-input"
+                                autocomplete="off"
+                                aria-describedby="search-help"
+                            >
+                            <span class="search-icon" aria-hidden="true">🔍</span>
+                        </div>
+
+                        <div class="filter-controls">
+                            <label for="category-filter" class="filter-label">Category:</label>
+                            <select id="category-filter" class="filter-select">
+                                <option value="">All Categories</option>
+                                <option value="native">Native</option>
+                                <option value="medicinal">Medicinal</option>
+                                <option value="exotic">Exotic</option>
+                                <option value="edible">Edible</option>
+                                <option value="ornamental">Ornamental</option>
+                            </select>
+                        </div>
+
+                        <div class="search-stats">
+                            <span id="results-count">0 plants found</span>
+                        </div>
+                    </div>
+
+                    <div id="search-help" class="search-help">
+                        Type to search through our database of Jordan's native and cultivated plant species
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plants Grid Section -->
+        <section class="plants-grid-section track" aria-labelledby="plants-grid-title">
+            <div class="container">
+                <div id="plants-grid" class="plants-grid" role="grid" aria-label="Plants database results">
+                    <!-- Plants will be loaded dynamically -->
+                </div>
+
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results-content glass-card">
+                        <div class="no-results-icon">🌱</div>
+                        <h3>No plants found</h3>
+                        <p>Try adjusting your search terms or filters</p>
+                        <button class="btn btn-primary" onclick="clearSearch()">Clear Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant Categories Overview -->
+        <section class="categories-section track" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 id="categories-title" class="section-title">Plant Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card glass-card animate-slide-in-left">
+                        <div class="category-icon animate-float">🌿</div>
+                        <h3>Native Species</h3>
+                        <p>Plants naturally occurring in Jordan's diverse ecosystems, adapted to local climate conditions.</p>
+                        <ul class="category-stats">
+                            <li><span class="stat-number" data-target="247">0</span> species documented</li>
+                            <li><span class="stat-number" data-target="85">0</span>% drought resistant</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card glass-card animate-slide-in-right">
+                        <div class="category-icon animate-float-reverse">🌺</div>
+                        <h3>Medicinal Plants</h3>
+                        <p>Traditional healing plants used in Jordanian folk medicine and modern phytotherapy.</p>
+                        <ul class="category-stats">
+                            <li><span class="stat-number" data-target="156">0</span> medicinal species</li>
+                            <li><span class="stat-number" data-target="78">0</span>% still in use</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card glass-card animate-slide-in-left">
+                        <div class="category-icon animate-float">🌳</div>
+                        <h3>Exotic Species</h3>
+                        <p>Introduced plants that have adapted well to Jordan's climate and agricultural systems.</p>
+                        <ul class="category-stats">
+                            <li><span class="stat-number" data-target="89">0</span> introduced species</li>
+                            <li><span class="stat-number" data-target="67">0</span>% agricultural value</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant Conservation Status -->
+        <section class="conservation-section track" aria-labelledby="conservation-title">
+            <div class="container">
+                <div class="conservation-content">
+                    <div class="conservation-text">
+                        <h2 id="conservation-title" class="section-title">Conservation Status</h2>
+                        <p class="section-subtitle">
+                            Understanding the conservation needs of Jordan's plant biodiversity
+                        </p>
+
+                        <div class="conservation-stats">
+                            <div class="conservation-stat">
+                                <div class="stat-icon">🛡️</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="23">0</span>
+                                    <span class="stat-label">Protected Species</span>
+                                </div>
+                            </div>
+
+                            <div class="conservation-stat">
+                                <div class="stat-icon">⚠️</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="15">0</span>
+                                    <span class="stat-label">Endangered Species</span>
+                                </div>
+                            </div>
+
+                            <div class="conservation-stat">
+                                <div class="stat-icon">🌱</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" data-target="8">0</span>
+                                    <span class="stat-label">Endemic Species</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conservation-chart">
+                        <canvas id="conservationChart" aria-label="Conservation status distribution chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Plant Detail Modal -->
+    <div id="plant-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h2 id="modal-title" class="modal-title"></h2>
+                <button class="modal-close" aria-label="Close plant details">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="plant-detail-grid">
+                    <div class="plant-image">
+                        <img id="modal-image" src="" alt="" loading="lazy">
+                    </div>
+
+                    <div class="plant-info">
+                        <div class="plant-meta">
+                            <span id="modal-category" class="plant-category"></span>
+                            <span id="modal-status" class="plant-status"></span>
+                        </div>
+
+                        <p id="modal-description" class="plant-description"></p>
+
+                        <div class="plant-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Scientific Name:</span>
+                                <span id="modal-scientific" class="detail-value"></span>
+                            </div>
+
+                            <div class="detail-item">
+                                <span class="detail-label">Family:</span>
+                                <span id="modal-family" class="detail-value"></span>
+                            </div>
+
+                            <div class="detail-item">
+                                <span class="detail-label">Habitat:</span>
+                                <span id="modal-habitat" class="detail-value"></span>
+                            </div>
+
+                            <div class="detail-item">
+                                <span class="detail-label">Uses:</span>
+                                <span id="modal-uses" class="detail-value"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant Button -->
+    <button id="ai-assistant-toggle" class="ai-assistant-btn animate-pulse" aria-label="Open AI Assistant">
+        <span class="ai-icon">🤖</span>
+        <span class="ai-text">Ask About Plants</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>
+                        Advancing sustainable agriculture and food security across Jordan through
+                        innovation, collaboration, and data-driven insights.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Plant Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#native">Native Species</a></li>
+                        <li><a href="#medicinal">Medicinal Plants</a></li>
+                        <li><a href="#conservation">Conservation</a></li>
+                        <li><a href="#research">Research</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.narc.gov.jo/Default/En" aria-describedby="external-link">Jordan Agricultural Research</a></li>
+                        <li><a href="https://www.rscn.org.jo/" aria-describedby="external-link">Royal Society for Conservation</a></li>
+                        <li><a href="https://www.just.edu.jo/" aria-describedby="external-link">Jordan University Science & Tech</a></li>
+                    </ul>
+                    <div id="external-link" class="sr-only">Opens in new window</div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built for IEEE PixelSite Hackathon</span>
+                        <span>•</span>
+                        <span>Jordan Biodiversity Initiative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/plants.js"></script>
+
+</body>
+</html>

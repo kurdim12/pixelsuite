@@ -1,0 +1,100 @@
+{
+  "qa_pairs": [
+    {
+      "question": "What are the main agricultural challenges in Jordan?",
+      "answer": "Jordan faces several key agricultural challenges: water scarcity (receiving only 200mm annual rainfall), limited arable land (only 3% of total area), soil degradation, climate change impacts, and dependency on food imports. The country imports over 90% of its food needs.",
+      "category": "challenges",
+      "related_pages": ["agriculture.html", "irrigation.html"]
+    },
+    {
+      "question": "How much water does Jordan use for agriculture?",
+      "answer": "Agriculture consumes approximately 65% of Jordan's total water resources. The country has implemented advanced drip irrigation systems that achieve 78% water efficiency, saving millions of cubic meters annually compared to traditional irrigation methods.",
+      "category": "water",
+      "related_pages": ["irrigation.html", "dashboard.html"]
+    },
+    {
+      "question": "What crops grow best in Jordan's climate?",
+      "answer": "Drought-resistant crops perform best in Jordan, including olive trees, wheat, barley, tomatoes, and citrus fruits. The Jordan Valley's microclimate allows for year-round cultivation of vegetables like cucumbers, peppers, and eggplants.",
+      "category": "crops",
+      "related_pages": ["crops.html", "agriculture.html"]
+    },
+    {
+      "question": "What is vertical farming and how can it help Jordan?",
+      "answer": "Vertical farming involves growing crops in vertically stacked layers using controlled environments. In Jordan, it can increase yield by 300-400% while using 95% less water than traditional farming, making it ideal for addressing water scarcity and land limitations.",
+      "category": "innovation",
+      "related_pages": ["vertical.html", "irrigation.html"]
+    },
+    {
+      "question": "What are Jordan's native plants?",
+      "answer": "Jordan hosts over 2,500 plant species, including the national flower Black Iris, Desert Sage, Jordan Oak, and Za'atar. About 120 species are endemic to the region, with many adapted to arid conditions and having traditional medicinal uses.",
+      "category": "biodiversity",
+      "related_pages": ["plants.html", "diseases.html"]
+    },
+    {
+      "question": "How does climate change affect Jordan's agriculture?",
+      "answer": "Climate change brings increased temperatures (2-3°C by 2050), reduced rainfall (10-20% decrease), more frequent droughts, and extreme weather events. This threatens crop yields and increases water stress on agricultural systems.",
+      "category": "climate",
+      "related_pages": ["agriculture.html", "dashboard.html"]
+    },
+    {
+      "question": "What technologies are used in Jordan's smart agriculture?",
+      "answer": "Jordan employs IoT sensors for soil monitoring, drone surveillance covering 75,000 hectares, AI-powered crop monitoring systems, precision irrigation controllers, and satellite-based crop health assessment tools.",
+      "category": "technology",
+      "related_pages": ["dashboard.html", "vertical.html"]
+    },
+    {
+      "question": "How efficient is Jordan's irrigation system?",
+      "answer": "Jordan's irrigation efficiency has reached 78% through modern drip irrigation systems, compared to 40% with traditional flood irrigation. This improvement saves approximately 150 million cubic meters of water annually.",
+      "category": "efficiency",
+      "related_pages": ["irrigation.html", "dashboard.html"]
+    },
+    {
+      "question": "What are the main plant diseases in Jordan?",
+      "answer": "Common plant diseases include powdery mildew, leaf rust in cereals, bacterial blight in tomatoes, and fungal infections in olive trees. Integrated pest management reduces chemical pesticide use by 50% while maintaining crop health.",
+      "category": "health",
+      "related_pages": ["diseases.html", "crops.html"]
+    },
+    {
+      "question": "How much food does Jordan import?",
+      "answer": "Jordan imports over 90% of its food needs, including 100% of rice, 95% of wheat, and 80% of vegetables. This dependency costs approximately $3.2 billion annually and creates food security vulnerabilities.",
+      "category": "imports",
+      "related_pages": ["dashboard.html", "agriculture.html"]
+    },
+    {
+      "question": "What is the Jordan Valley Authority's role?",
+      "answer": "The Jordan Valley Authority manages irrigation infrastructure, water distribution, agricultural development projects, and farmer training programs. It oversees 900 km of irrigation networks serving 24,000 hectares of farmland.",
+      "category": "governance",
+      "related_pages": ["irrigation.html", "agriculture.html"]
+    },
+    {
+      "question": "How many farmers work in Jordan?",
+      "answer": "Approximately 75,000 people work in Jordan's agricultural sector, representing 3% of the workforce. Over 2,500 farmers have been trained in modern techniques, and 120 agricultural cooperatives have been established.",
+      "category": "workforce",
+      "related_pages": ["agriculture.html", "dashboard.html"]
+    },
+    {
+      "question": "What is the potential of organic farming in Jordan?",
+      "answer": "Organic farming in Jordan covers 1,200 hectares with 45 certified organic farms. The sector shows 15% annual growth, focusing on olive oil, herbs, and vegetables for both domestic and export markets.",
+      "category": "organic",
+      "related_pages": ["agriculture.html", "crops.html"]
+    },
+    {
+      "question": "How does Jordan conserve soil?",
+      "answer": "Jordan implements terracing systems, contour farming, cover crops, and reforestation programs. These methods have improved soil health indicators by 28% and reduced erosion in vulnerable areas.",
+      "category": "conservation",
+      "related_pages": ["agriculture.html", "plants.html"]
+    },
+    {
+      "question": "What are the benefits of greenhouse farming in Jordan?",
+      "answer": "Greenhouses in Jordan use 80% less water, extend growing seasons, protect crops from extreme weather, and increase yields by 200-300%. The country has over 5,000 hectares under protected cultivation.",
+      "category": "greenhouses",
+      "related_pages": ["vertical.html", "irrigation.html"]
+    }
+  ],
+  "metadata": {
+    "last_updated": "2025-01-15",
+    "total_entries": 15,
+    "categories": ["challenges", "water", "crops", "innovation", "biodiversity", "climate", "technology", "efficiency", "health", "imports", "governance", "workforce", "organic", "conservation", "greenhouses"],
+    "version": "1.0"
+  }
+}

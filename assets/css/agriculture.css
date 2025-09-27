@@ -1,0 +1,788 @@
+/* ==============================================
+   AGRICULTURE PAGE STYLES
+   File: assets/css/agriculture.css
+   ============================================== */
+
+/* Agriculture Hero Section */
+.agriculture-hero {
+    background: linear-gradient(135deg, 
+        rgba(101, 163, 13, 0.9) 0%, 
+        rgba(77, 124, 15, 0.8) 50%, 
+        rgba(54, 83, 20, 0.9) 100%),
+        url('../img/jordan-valley-close-up-6-1536539.jpg') center/cover;
+    min-height: 70vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.agriculture-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(0, 0, 0, 0.2) 0%, 
+        rgba(101, 163, 13, 0.3) 100%);
+    z-index: 1;
+}
+
+.agriculture-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.agriculture-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.1;
+}
+
+.agriculture-hero .hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.agriculture-hero .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.agriculture-hero .stat-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.agriculture-hero .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.agriculture-hero .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.agriculture-hero .stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Systems Overview Section */
+.systems-overview {
+    padding: 5rem 0;
+    background: var(--background-primary);
+}
+
+.systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.system-card {
+    background: var(--background-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.system-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.system-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.system-card:hover::before {
+    transform: scaleX(1);
+}
+
+.system-card.traditional::before {
+    background: #d97706;
+}
+
+.system-card.modern::before {
+    background: #0ea5e9;
+}
+
+.system-card.precision::before {
+    background: #8b5cf6;
+}
+
+.system-card.hydroponic::before {
+    background: #10b981;
+}
+
+.system-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.system-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.system-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex-grow: 1;
+}
+
+.system-adoption {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.system-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.system-features {
+    margin-bottom: 1.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.feature-icon {
+    font-size: 1.2rem;
+}
+
+.system-regions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.region-tag {
+    background: var(--background-primary);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Regional Agriculture Section */
+.regional-agriculture {
+    padding: 5rem 0;
+    background: var(--background-secondary);
+}
+
+.regional-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 3rem 0;
+    background: var(--background-primary);
+    padding: 0.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.region-btn {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.region-btn.active,
+.region-btn:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.regional-content {
+    position: relative;
+    min-height: 400px;
+}
+
+.region-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.region-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative;
+}
+
+.region-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: var(--background-primary);
+    border-radius: 16px;
+    padding: 3rem;
+    border: 1px solid var(--border-color);
+}
+
+.region-details h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.region-details p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.region-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.region-stat {
+    text-align: center;
+    background: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.region-stat .stat-value {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.region-stat .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.region-crops h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.crop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.crop-tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+.crop-tag.vegetables {
+    background: #16a34a;
+}
+
+.crop-tag.fruits {
+    background: #dc2626;
+}
+
+.crop-tag.grains {
+    background: #d97706;
+}
+
+.crop-tag.legumes {
+    background: #7c3aed;
+}
+
+.crop-tag.herbs {
+    background: #059669;
+}
+
+.region-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.region-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.region-info:hover .region-image img {
+    transform: scale(1.05);
+}
+
+/* Farming Techniques Section */
+.farming-techniques {
+    padding: 5rem 0;
+    background: var(--background-primary);
+}
+
+.techniques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.technique-card {
+    background: var(--background-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.technique-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.technique-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.technique-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.technique-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.technique-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.technique-benefits li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.technique-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.technique-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.technique-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 5rem 0;
+    background: var(--background-secondary);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background: var(--background-primary);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.story-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.story-card:hover .story-image img {
+    transform: scale(1.05);
+}
+
+.story-content {
+    padding: 2rem;
+}
+
+.story-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.story-header h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.story-location {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.story-quote {
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.story-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.result {
+    text-align: center;
+    background: var(--background-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.result-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.result-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Call to Action Section */
+.agriculture-cta {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, 
+        rgba(101, 163, 13, 0.1) 0%, 
+        rgba(77, 124, 15, 0.05) 100%);
+    text-align: center;
+}
+
+.agriculture-cta .cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.agriculture-cta .cta-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2.5rem auto;
+}
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .agriculture-hero {
+    background: linear-gradient(135deg, 
+        rgba(54, 83, 20, 0.9) 0%, 
+        rgba(77, 124, 15, 0.8) 50%, 
+        rgba(101, 163, 13, 0.9) 100%),
+        url('../img/jordan-valley-close-up-6-1536539.jpg') center/cover;
+}
+
+[data-theme="dark"] .system-card:hover,
+[data-theme="dark"] .technique-card:hover,
+[data-theme="dark"] .story-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .agriculture-cta {
+    background: linear-gradient(135deg, 
+        rgba(101, 163, 13, 0.05) 0%, 
+        rgba(77, 124, 15, 0.02) 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.system-card,
+.technique-card,
+.story-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.system-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.system-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.system-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .agriculture-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .agriculture-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .agriculture-hero .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .systems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .regional-selector {
+        flex-direction: column;
+    }
+    
+    .region-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    .region-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .techniques-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-results {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .agriculture-hero {
+        min-height: 60vh;
+    }
+    
+    .agriculture-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .agriculture-hero .stat-item {
+        padding: 1rem;
+    }
+    
+    .agriculture-hero .stat-number {
+        font-size: 2rem;
+    }
+    
+    .system-card,
+    .technique-card {
+        padding: 1.5rem;
+    }
+    
+    .region-info {
+        padding: 1.5rem;
+    }
+    
+    .story-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Focus and Accessibility */
+.region-btn:focus,
+.technique-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.system-card:focus-within,
+.technique-card:focus-within,
+.story-card:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .agriculture-hero {
+        background: none !important;
+        color: black !important;
+        min-height: auto;
+    }
+    
+    .system-card,
+    .technique-card,
+    .story-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+    
+    .regional-selector {
+        display: none;
+    }
+    
+    .region-panel {
+        position: relative !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+    }
+}

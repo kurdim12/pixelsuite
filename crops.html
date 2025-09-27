@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crops Database - Food Security Jordan</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-brand">
+                <span style="font-size: 1.5rem;">🇯🇴</span>
+                Food Security Jordan
+            </a>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="crops.html" class="nav-link active">Crops</a></li>
+                <li><a href="agriculture.html" class="nav-link">Agriculture</a></li>
+                <li><a href="irrigation.html" class="nav-link">Irrigation</a></li>
+                <li><a href="vertical.html" class="nav-link">Vertical Farming</a></li>
+                <li><a href="diseases.html" class="nav-link">Plant Diseases</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="suggestions.html" class="nav-link">Suggestions</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon theme-icon-light">🌙</span>
+                    <span class="theme-icon theme-icon-dark">☀️</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">Jordan's Agricultural</span><br>
+                        Crop Database
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover Jordan's diverse agricultural heritage. From ancient olive groves to modern greenhouse innovations, explore cultivation techniques, water management, and economic opportunities for sustainable farming.
+                    </p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; max-width: 600px; margin: 2rem auto;">
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: var(--radius); backdrop-filter: blur(10px);">
+                            <div style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;" id="total-crops-hero">12</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Crop Varieties</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: var(--radius); backdrop-filter: blur(10px);">
+                            <div style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;" id="total-categories-hero">5</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Categories</div>
+                        </div>
+                        <div style="text-align: center; padding: 1.5rem; background: rgba(255,255,255,0.1); border-radius: var(--radius); backdrop-filter: blur(10px);">
+                            <div style="font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;" id="export-value-hero">128M</div>
+                            <div style="font-size: 0.9rem; opacity: 0.9;">Export Value JOD</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section style="padding: 4rem 0; background: var(--surface);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h2 class="section-title">Explore Crops</h2>
+                    <p class="section-subtitle">Search and filter through Jordan's comprehensive agricultural database</p>
+                </div>
+
+                <div style="max-width: 1000px; margin: 0 auto;">
+                    <!-- Search Bar -->
+                    <div style="margin-bottom: 2rem;">
+                        <div style="position: relative; max-width: 600px; margin: 0 auto;">
+                            <input type="text" id="search-input" 
+                                   style="width: 100%; padding: 1rem 4rem 1rem 1.5rem; border: 2px solid var(--border); border-radius: 50px; font-size: 1rem; background: var(--bg);"
+                                   placeholder="Search crops by name, scientific name, or characteristics...">
+                            <button id="search-button" 
+                                    style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: var(--accent); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer;">
+                                <span style="color: white;">🔍</span>
+                            </button>
+                            <button id="clear-search" style="display: none; position: absolute; right: 55px; top: 50%; transform: translateY(-50%); background: var(--muted); border: none; border-radius: 50%; width: 24px; height: 24px; color: white; cursor: pointer;">✕</button>
+                        </div>
+                    </div>
+
+                    <!-- Filters -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Category</label>
+                            <select id="category-filter" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border); border-radius: var(--radius); background: var(--bg);">
+                                <option value="all">All Categories</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Water Requirement</label>
+                            <select id="water-filter" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border); border-radius: var(--radius); background: var(--bg);">
+                                <option value="all">Any Water Level</option>
+                                <option value="low">Low Water Need</option>
+                                <option value="medium">Medium Water Need</option>
+                                <option value="high">High Water Need</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Economic Value</label>
+                            <select id="value-filter" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border); border-radius: var(--radius); background: var(--bg);">
+                                <option value="all">Any Economic Value</option>
+                                <option value="high">High Value Crops</option>
+                                <option value="medium">Medium Value Crops</option>
+                                <option value="low">Low Value Crops</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Growing Season</label>
+                            <select id="season-filter" style="width: 100%; padding: 0.75rem; border: 2px solid var(--border); border-radius: var(--radius); background: var(--bg);">
+                                <option value="all">Any Season</option>
+                                <option value="spring">Spring Growing</option>
+                                <option value="summer">Summer Growing</option>
+                                <option value="fall">Fall Growing</option>
+                                <option value="winter">Winter Growing</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Quick Filters -->
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; padding: 1rem; background: var(--bg); border-radius: var(--radius);">
+                        <span style="font-weight: 600;">Quick Filters:</span>
+                        <button class="filter-tag" data-filter="drought-resistant" style="padding: 0.5rem 1rem; background: var(--surface); border: 2px solid var(--border); border-radius: 20px; cursor: pointer;">🌵 Drought Resistant</button>
+                        <button class="filter-tag" data-filter="export-potential" style="padding: 0.5rem 1rem; background: var(--surface); border: 2px solid var(--border); border-radius: 20px; cursor: pointer;">📦 Export Ready</button>
+                        <button class="filter-tag" data-filter="traditional" style="padding: 0.5rem 1rem; background: var(--surface); border: 2px solid var(--border); border-radius: 20px; cursor: pointer;">🏛️ Traditional</button>
+                        <button class="filter-tag" data-filter="high-yield" style="padding: 0.5rem 1rem; background: var(--surface); border: 2px solid var(--border); border-radius: 20px; cursor: pointer;">📈 High Yield</button>
+                        <button class="filter-tag" data-filter="greenhouse-suitable" style="padding: 0.5rem 1rem; background: var(--surface); border: 2px solid var(--border); border-radius: 20px; cursor: pointer;">🏠 Greenhouse</button>
+                    </div>
+
+                    <!-- Results Summary -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 1rem;">
+                        <div id="results-count" style="font-weight: 600;">
+                            <span id="crop-count">0</span> crops found
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <label style="font-weight: 500;">Sort by:</label>
+                            <select id="sort-select" style="padding: 0.5rem; border: 1px solid var(--border); border-radius: 6px; background: var(--bg);">
+                                <option value="name">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
+                                <option value="economic-value">Economic Value</option>
+                                <option value="water-requirement">Water Requirement</option>
+                                <option value="category">Category</option>
+                            </select>
+                        </div>
+                        <button class="btn-secondary" id="reset-filters">Reset All</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crops Grid Section -->
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <!-- Loading State -->
+                <div id="loading-state" style="text-align: center; padding: 4rem;">
+                    <div style="width: 60px; height: 60px; border: 4px solid var(--border); border-top: 4px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 1rem;"></div>
+                    <p>Loading agricultural data...</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="error-state" style="display: none; text-align: center; padding: 4rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem;">⚠️</div>
+                    <h3>Unable to Load Crops Database</h3>
+                    <p style="margin-bottom: 2rem;">We're experiencing technical difficulties. Please try again.</p>
+                    <button class="btn-primary" onclick="location.reload()">Retry Loading</button>
+                </div>
+
+                <!-- Empty State -->
+                <div id="empty-state" style="display: none; text-align: center; padding: 4rem;">
+                    <div style="font-size: 4rem; margin-bottom: 1rem; opacity: 0.5;">🔍</div>
+                    <h3>No Matching Crops Found</h3>
+                    <p style="margin-bottom: 2rem;">Try adjusting your search criteria.</p>
+                    <button class="btn-secondary" id="clear-all-filters">Clear All Filters</button>
+                </div>
+
+                <!-- Crops Grid -->
+                <div id="crops-grid" style="display: none; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem;" class="grid">
+                    <!-- Crop cards populated by JavaScript -->
+                </div>
+
+                <!-- Load More Button -->
+                <div id="load-more-section" style="display: none; text-align: center; margin-top: 2rem;">
+                    <button class="btn-outline" id="load-more-btn">Load More Crops</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Crops Section -->
+        <section style="padding: 4rem 0; background: var(--surface);">
+            <div class="container">
+                <h2 class="section-title">Featured Agricultural Crops</h2>
+                <p class="section-subtitle">Showcasing Jordan's most important crops</p>
+                <div id="featured-crops-grid" class="links-grid">
+                    <!-- Featured crops populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Overview -->
+        <section style="padding: 4rem 0;">
+            <div class="container">
+                <h2 class="section-title">Browse by Category</h2>
+                <p class="section-subtitle">Explore Jordan's agricultural diversity</p>
+                <div id="categories-grid" class="links-grid">
+                    <!-- Categories populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Crop Detail Modal -->
+    <div class="modal" id="crop-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-crop-name">Crop Information</h2>
+                <button class="modal-close" id="modal-close">&times;</button>
+            </div>
+            <div id="modal-body">
+                <!-- Crop details populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <span style="font-size: 1.5rem;">🇯🇴</span>
+                        <span style="font-weight: 600;">Food Security Jordan</span>
+                    </div>
+                    <p>Advancing sustainable agriculture and enhancing food security across the Hashemite Kingdom of Jordan.</p>
+                </div>
+                <div>
+                    <h4>Agricultural Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home Dashboard</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="agriculture.html">Agriculture Overview</a></li>
+                        <li><a href="dashboard.html">Analytics Dashboard</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Technology & Innovation</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Smart Irrigation</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Disease Management</a></li>
+                        <li><a href="suggestions.html">Submit Ideas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Information</h4>
+                    <p><strong>Ministry of Agriculture</strong><br>
+                    Agricultural Research Department<br>
+                    Amman, Jordan</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="footer-meta">
+                        &copy; 2025 Food Security Jordan Initiative
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/crops.js"></script>
+
+    <style>
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .filter-tag:hover {
+            border-color: var(--accent) !important;
+            background: var(--accent) !important;
+            color: white !important;
+        }
+        
+        .filter-tag.active {
+            background: var(--accent) !important;
+            border-color: var(--accent) !important;
+            color: white !important;
+        }
+
+        .crop-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            transition: all var(--transition-fast);
+            cursor: pointer;
+        }
+
+        .crop-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent);
+        }
+
+        .crop-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .crop-arabic {
+            color: var(--muted);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            direction: rtl;
+        }
+
+        .crop-scientific {
+            color: var(--muted);
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .crop-description {
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .crop-traits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .trait-tag {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .view-details {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
+</body>
+</html>
+    <!-- Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">🇯🇴</span>
+                    <span class="brand-text">Food Security Jordan</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="crops.html" class="nav-link active">Crops</a></li>
+                <li><a href="agriculture.html" class="nav-link">Agriculture</a></li>
+                <li><a href="irrigation.html" class="nav-link">Irrigation</a></li>
+                <li><a href="vertical.html" class="nav-link">Vertical Farming</a></li>
+                <li><a href="diseases.html" class="nav-link">Plant Diseases</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="suggestions.html" class="nav-link">Suggestions</a></li>
+            </ul>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section crops-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="highlight">Jordan's Agricultural</span><br>
+                        Crop Database
+                    </h1>
+                    <p class="hero-description">
+                        Discover Jordan's diverse agricultural heritage. From ancient olive groves to modern greenhouse innovations, explore cultivation techniques, water management, and economic opportunities for sustainable farming in the Kingdom.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-crops-hero">12</span>
+                            <span class="stat-label">Crop Varieties</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="total-categories-hero">5</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="export-value-hero">128M</span>
+                            <span class="stat-label">Export Value JOD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-header">
+                    <h2>Explore Crops</h2>
+                    <p>Search and filter through Jordan's comprehensive agricultural database</p>
+                </div>
+
+                <div class="search-controls">
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <div class="search-input-wrapper">
+                            <input type="text" id="search-input" class="search-input" 
+                                   placeholder="Search crops by name, scientific name, or characteristics...">
+                            <button class="search-button" id="search-button" aria-label="Search">
+                                <span class="search-icon">🔍</span>
+                            </button>
+                            <button class="clear-search" id="clear-search" style="display: none;" aria-label="Clear search">
+                                <span>✕</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filters -->
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="category-filter">Category</label>
+                            <select id="category-filter" class="filter-select">
+                                <option value="all">All Categories</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="water-filter">Water Requirement</label>
+                            <select id="water-filter" class="filter-select">
+                                <option value="all">Any Water Level</option>
+                                <option value="low">Low Water Need</option>
+                                <option value="medium">Medium Water Need</option>
+                                <option value="high">High Water Need</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="value-filter">Economic Value</label>
+                            <select id="value-filter" class="filter-select">
+                                <option value="all">Any Economic Value</option>
+                                <option value="high">High Value Crops</option>
+                                <option value="medium">Medium Value Crops</option>
+                                <option value="low">Low Value Crops</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="season-filter">Growing Season</label>
+                            <select id="season-filter" class="filter-select">
+                                <option value="all">Any Season</option>
+                                <option value="spring">Spring Growing</option>
+                                <option value="summer">Summer Growing</option>
+                                <option value="fall">Fall Growing</option>
+                                <option value="winter">Winter Growing</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-actions">
+                            <button class="btn-secondary" id="reset-filters">Reset All</button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Filters (Tags) -->
+                    <div class="quick-filters">
+                        <span class="quick-filter-label">Quick Filters:</span>
+                        <div class="filter-tags">
+                            <button class="filter-tag" data-filter="drought-resistant">🌵 Drought Resistant</button>
+                            <button class="filter-tag" data-filter="export-potential">📦 Export Ready</button>
+                            <button class="filter-tag" data-filter="traditional">🏛️ Traditional</button>
+                            <button class="filter-tag" data-filter="high-yield">📈 High Yield</button>
+                            <button class="filter-tag" data-filter="greenhouse-suitable">🏠 Greenhouse</button>
+                        </div>
+                    </div>
+
+                    <!-- Results Summary -->
+                    <div class="results-summary">
+                        <div class="results-count" id="results-count">
+                            <span id="crop-count">0</span> crops found
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select" class="sort-select">
+                                <option value="name">Name (A-Z)</option>
+                                <option value="name-desc">Name (Z-A)</option>
+                                <option value="economic-value">Economic Value</option>
+                                <option value="water-requirement">Water Requirement</option>
+                                <option value="category">Category</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crops Grid Section -->
+        <section class="crops-grid-section">
+            <div class="container">
+                <!-- Loading State -->
+                <div class="loading-state" id="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading agricultural data...</p>
+                </div>
+
+                <!-- Error State -->
+                <div class="error-state" id="error-state" style="display: none;">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Unable to Load Crops Database</h3>
+                    <p>We're experiencing technical difficulties loading the crops data. Please check your connection and try again.</p>
+                    <button class="btn-primary" onclick="location.reload()">Retry Loading</button>
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="empty-state" style="display: none;">
+                    <div class="empty-icon">🔍</div>
+                    <h3>No Matching Crops Found</h3>
+                    <p>We couldn't find any crops matching your current search criteria. Try adjusting your filters or search terms.</p>
+                    <button class="btn-secondary" id="clear-all-filters">Clear All Filters</button>
+                </div>
+
+                <!-- Crops Grid -->
+                <div class="crops-grid" id="crops-grid" style="display: none;">
+                    <!-- Crop cards will be populated by JavaScript -->
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section" id="load-more-section" style="display: none;">
+                    <button class="btn-outline" id="load-more-btn">Load More Crops</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Crops Section -->
+        <section class="featured-crops-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Agricultural Crops</h2>
+                    <p>Showcasing Jordan's most important and economically valuable crops</p>
+                </div>
+
+                <div class="featured-crops-grid" id="featured-crops-grid">
+                    <!-- Featured crops will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Crop Categories Overview -->
+        <section class="categories-overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Browse by Category</h2>
+                    <p>Explore Jordan's agricultural diversity organized by crop types</p>
+                </div>
+
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Categories will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Crop Detail Modal -->
+    <div class="modal" id="crop-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-crop-name">Crop Information</h2>
+                <button class="modal-close" id="modal-close" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Crop details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🇯🇴 Food Security Jordan</h3>
+                    <p>Advancing sustainable agriculture and enhancing food security across the Hashemite Kingdom of Jordan through innovation, research, and community engagement.</p>
+                    <div class="footer-social">
+                        <span>Follow our agricultural initiatives</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Agricultural Resources</h4>
+                    <ul>
+                        <li><a href="index.html">Home Dashboard</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="agriculture.html">Agriculture Overview</a></li>
+                        <li><a href="dashboard.html">Analytics Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technology & Innovation</h4>
+                    <ul>
+                        <li><a href="irrigation.html">Smart Irrigation</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Disease Management</a></li>
+                        <li><a href="suggestions.html">Submit Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <p>
+                        <strong>Ministry of Agriculture</strong><br>
+                        Agricultural Research Department<br>
+                        Amman, Jordan<br>
+                        <a href="mailto:info@agriculture.gov.jo">info@agriculture.gov.jo</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Food Security Jordan Initiative. Empowering sustainable agriculture for a food-secure future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/crops.js"></script>
+</body>
+</html>

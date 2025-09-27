@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://foodsecurityjo.vercel.app/sitemap.xml
+
+# Specific instructions for search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block common bot files if needed
+Disallow: /assets/data/
+Disallow: /js/
+Disallow: /*.json$
+
+# Allow important pages
+Allow: /index.html
+Allow: /agriculture.html
+Allow: /irrigation.html
+Allow: /crops.html
+Allow: /plants.html
+Allow: /vertical.html
+Allow: /diseases.html
+Allow: /dashboard.html
+Allow: /suggestions.html
+
+# Cache and performance
+Cache-control: max-age=86400

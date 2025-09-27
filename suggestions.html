@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions - Food Security Jordan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/suggestions.css">
+    <meta name="description" content="Share your insights, contribute data, and collaborate with our growing community of agricultural innovators">
+    <meta name="theme-color" content="#226646">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link" role="menuitem">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link" role="menuitem">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link active" role="menuitem" aria-current="page">Suggestions</a></li>
+                </ul>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Hero Section -->
+        <section class="suggestions-hero">
+            <div class="hero-background">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Share Your Ideas for 
+                        <span class="highlight">Jordan's Agriculture</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Help us build a more sustainable and food-secure Jordan. Your insights, experiences, 
+                        and innovative ideas drive our agricultural transformation.
+                    </p>
+                    <div class="contribution-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="totalSuggestions">1,247</span>
+                            <span class="stat-label">Suggestions Received</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="implementedIdeas">89</span>
+                            <span class="stat-label">Ideas Implemented</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="activeContributors">456</span>
+                            <span class="stat-label">Active Contributors</span>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- Suggestion Form -->
+        <section class="suggestion-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 id="formTitle">Share Your Suggestion</h2>
+                        <p id="formDescription">Help us improve Jordan's agricultural sector with your insights and ideas.</p>
+                    </div>
+
+                    <form class="suggestion-form" id="suggestionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="organization">Organization/Farm</label>
+                                <input type="text" id="organization" name="organization" placeholder="Optional">
+                            </div>
+                            <div class="form-group">
+                                <label for="region">Region *</label>
+                                <select id="region" name="region" required>
+                                    <option value="">Select Region</option>
+                                    <option value="amman">Amman</option>
+                                    <option value="irbid">Irbid</option>
+                                    <option value="zarqa">Zarqa</option>
+                                    <option value="balqa">Balqa</option>
+                                    <option value="mafraq">Mafraq</option>
+                                    <option value="karak">Karak</option>
+                                    <option value="tafilah">Tafilah</option>
+                                    <option value="maan">Ma'an</option>
+                                    <option value="aqaba">Aqaba</option>
+                                    <option value="madaba">Madaba</option>
+                                    <option value="jerash">Jerash</option>
+                                    <option value="ajloun">Ajloun</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Suggestion Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="innovation">Innovation Ideas</option>
+                                <option value="experience">Field Experience</option>
+                                <option value="data">Data Contribution</option>
+                                <option value="policy">Policy Suggestions</option>
+                                <option value="collaboration">Partnership Ideas</option>
+                                <option value="problem">Problem Reports</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="title">Suggestion Title *</label>
+                            <input type="text" id="title" name="title" placeholder="Brief, descriptive title for your suggestion" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Detailed Description *</label>
+                            <textarea id="description" name="description" rows="6" placeholder="Provide a detailed description of your suggestion, including background, benefits, and implementation ideas..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="impact">Expected Impact</label>
+                            <textarea id="impact" name="impact" rows="3" placeholder="Describe the potential impact of your suggestion on Jordan's agriculture..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="resources">Required Resources</label>
+                            <textarea id="resources" name="resources" rows="3" placeholder="What resources, funding, or support would be needed to implement this idea?"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">Implementation Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select Timeline</option>
+                                <option value="immediate">Immediate (1-3 months)</option>
+                                <option value="short">Short-term (3-12 months)</option>
+                                <option value="medium">Medium-term (1-3 years)</option>
+                                <option value="long">Long-term (3+ years)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="priority">Priority Level</label>
+                            <select id="priority" name="priority">
+                                <option value="">Select Priority</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                                <option value="critical">Critical</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="followUp" name="followUp">
+                                <span class="checkmark"></span>
+                                I'm interested in participating in follow-up discussions about this suggestion
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to receive updates about Jordan's agricultural initiatives
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-outline" onclick="resetForm()">Reset Form</button>
+                            <button type="submit" class="btn btn-primary">Submit Suggestion</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Suggestions -->
+        <section class="recent-suggestions">
+            <div class="container">
+                <h2 class="section-title">Recent Community Suggestions</h2>
+                <p class="section-subtitle">
+                    See what fellow farmers and agricultural experts are proposing for Jordan's future
+                </p>
+
+                <div class="suggestions-filter">
+                    <button class="filter-btn active" data-filter="all">All Suggestions</button>
+                    <button class="filter-btn" data-filter="innovation">Innovation</button>
+                    <button class="filter-btn" data-filter="experience">Experience</button>
+                    <button class="filter-btn" data-filter="policy">Policy</button>
+                    <button class="filter-btn" data-filter="implemented">Implemented</button>
+                </div>
+
+                <div class="suggestions-list" id="suggestionsList">
+                    <div class="suggestion-card implemented" data-category="innovation">
+                        <div class="suggestion-header">
+                            <div class="suggestion-meta">
+                                <span class="suggestion-category innovation">Innovation</span>
+                                <span class="suggestion-status implemented">Implemented</span>
+                            </div>
+                            <span class="suggestion-date">2 weeks ago</span>
+                        </div>
+                        <h3 class="suggestion-title">Solar-Powered Drip Irrigation for Remote Areas</h3>
+                        <p class="suggestion-excerpt">Implementing solar panels to power drip irrigation systems in remote farming areas without grid electricity access...</p>
+                        <div class="suggestion-footer">
+                            <span class="suggestion-author">Ahmad M. - Mafraq</span>
+                            <div class="suggestion-actions">
+                                <button class="action-btn" title="Like">👍 24</button>
+                                <button class="action-btn" title="Comments">💬 8</button>
+                                <button class="action-btn" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card under-review" data-category="policy">
+                        <div class="suggestion-header">
+                            <div class="suggestion-meta">
+                                <span class="suggestion-category policy">Policy</span>
+                                <span class="suggestion-status under-review">Under Review</span>
+                            </div>
+                            <span class="suggestion-date">1 week ago</span>
+                        </div>
+                        <h3 class="suggestion-title">Subsidies for Organic Certification</h3>
+                        <p class="suggestion-excerpt">Government subsidies to help small farmers obtain organic certification and access premium markets...</p>
+                        <div class="suggestion-footer">
+                            <span class="suggestion-author">Fatima H. - Jordan Valley</span>
+                            <div class="suggestion-actions">
+                                <button class="action-btn" title="Like">👍 42</button>
+                                <button class="action-btn" title="Comments">💬 15</button>
+                                <button class="action-btn" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card new" data-category="experience">
+                        <div class="suggestion-header">
+                            <div class="suggestion-meta">
+                                <span class="suggestion-category experience">Experience</span>
+                                <span class="suggestion-status new">New</span>
+                            </div>
+                            <span class="suggestion-date">3 days ago</span>
+                        </div>
+                        <h3 class="suggestion-title">Intercropping Techniques for Desert Farming</h3>
+                        <p class="suggestion-excerpt">Sharing successful intercropping methods that increased yields by 30% in arid conditions...</p>
+                        <div class="suggestion-footer">
+                            <span class="suggestion-author">Mohammed K. - Karak</span>
+                            <div class="suggestion-actions">
+                                <button class="action-btn" title="Like">👍 18</button>
+                                <button class="action-btn" title="Comments">💬 5</button>
+                                <button class="action-btn" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card new" data-category="innovation">
+                        <div class="suggestion-header">
+                            <div class="suggestion-meta">
+                                <span class="suggestion-category innovation">Innovation</span>
+                                <span class="suggestion-status new">New</span>
+                            </div>
+                            <span class="suggestion-date">5 days ago</span>
+                        </div>
+                        <h3 class="suggestion-title">AI-Powered Pest Detection Mobile App</h3>
+                        <p class="suggestion-excerpt">Mobile application using image recognition to identify crop pests and diseases with treatment recommendations...</p>
+                        <div class="suggestion-footer">
+                            <span class="suggestion-author">Sara A. - Amman</span>
+                            <div class="suggestion-actions">
+                                <button class="action-btn" title="Like">👍 35</button>
+                                <button class="action-btn" title="Comments">💬 12</button>
+                                <button class="action-btn" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="suggestion-card under-review" data-category="collaboration">
+                        <div class="suggestion-header">
+                            <div class="suggestion-meta">
+                                <span class="suggestion-category collaboration">Partnership</span>
+                                <span class="suggestion-status under-review">Under Review</span>
+                            </div>
+                            <span class="suggestion-date">1 week ago</span>
+                        </div>
+                        <h3 class="suggestion-title">Regional Farmer Exchange Program</h3>
+                        <p class="suggestion-excerpt">Creating a program for farmers to visit and learn from successful operations in other regions...</p>
+                        <div class="suggestion-footer">
+                            <span class="suggestion-author">Hassan R. - Irbid</span>
+                            <div class="suggestion-actions">
+                                <button class="action-btn" title="Like">👍 29</button>
+                                <button class="action-btn" title="Comments">💬 9</button>
+                                <button class="action-btn" title="Share">📤</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more">
+                    <button class="btn btn-outline" id="loadMoreSuggestions">Load More Suggestions</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="implementation-success">
+            <div class="container">
+                <h2 class="section-title">From Ideas to Impact</h2>
+                <p class="section-subtitle">
+                    Community suggestions that have been successfully implemented and made a real difference
+                </p>
+
+                <div class="success-grid">
+                    <div class="success-story">
+                        <div class="success-header">
+                            <div class="success-icon">💡→✅</div>
+                            <span class="success-timeline">Idea to Implementation: 8 months</span>
+                        </div>
+                        <h3>Mobile Soil Testing Units</h3>
+                        <p class="success-description">
+                            Ahmed's suggestion for mobile soil testing services led to the launch of 5 mobile units 
+                            serving remote farming areas across Jordan.
+                        </p>
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-value">2,400</span>
+                                <span class="metric-label">Farmers Served</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">15%</span>
+                                <span class="metric-label">Yield Improvement</span>
+                            </div>
+                        </div>
+                        <span class="success-contributor">Suggested by Ahmed M. - Balqa</span>
+                    </div>
+
+                    <div class="success-story">
+                        <div class="success-header">
+                            <div class="success-icon">🤝→🌾</div>
+                            <span class="success-timeline">Idea to Implementation: 6 months</span>
+                        </div>
+                        <h3>Farmer Cooperative Network</h3>
+                        <p class="success-description">
+                            Layla's proposal for regional farmer cooperatives has created 12 active groups 
+                            sharing resources and knowledge.
+                        </p>
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-value">850</span>
+                                <span class="metric-label">Active Members</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">25%</span>
+                                <span class="metric-label">Cost Reduction</span>
+                            </div>
+                        </div>
+                        <span class="success-contributor">Suggested by Layla S. - Jerash</span>
+                    </div>
+
+                    <div class="success-story">
+                        <div class="success-header">
+                            <div class="success-icon">📱→📊</div>
+                            <span class="success-timeline">Idea to Implementation: 12 months</span>
+                        </div>
+                        <h3>Weather Alert System</h3>
+                        <p class="success-description">
+                            Omar's idea for SMS weather alerts has been integrated into the national agricultural 
+                            monitoring system, reaching thousands of farmers.
+                        </p>
+                        <div class="success-metrics">
+                            <div class="metric">
+                                <span class="metric-value">8,500</span>
+                                <span class="metric-label">Subscribers</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">40%</span>
+                                <span class="metric-label">Crop Loss Reduction</span>
+                            </div>
+                        </div>
+                        <span class="success-contributor">Suggested by Omar K. - Mafraq</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="suggestions-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Your Voice Matters</h2>
+                    <p>
+                        Every great agricultural innovation starts with a single idea. Join our community of 
+                        forward-thinking farmers, researchers, and agricultural enthusiasts shaping Jordan's future.
+                    </p>
+                    <div class="cta-actions">
+                        <button class="btn btn-primary" onclick="document.getElementById('suggestionForm').scrollIntoView()">
+                            <span class="btn-icon">💡</span>
+                            Share Your Idea
+                        </button>
+                        <a href="dashboard.html" class="btn btn-secondary">
+                            <span class="btn-icon">📊</span>
+                            View Implementation Status
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>Advancing sustainable agriculture and food security across Jordan through innovation, collaboration, and data-driven insights.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="agriculture.html">Agriculture Systems</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Irrigation Methods</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.moa.gov.jo/">Ministry of Agriculture</a></li>
+                        <li><a href="https://www.mwi.gov.jo/">Jordan Valley Authority</a></li>
+                        <li><a href="https://www.narc.gov.jo/">Agricultural Research Centers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built with sustainability in mind</span>
+                        <span>•</span>
+                        <button class="footer-accessibility" aria-label="Accessibility options">Accessibility</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Suggestion Submitted Successfully!</h3>
+                <button class="modal-close" onclick="closeModal('successModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">✅</div>
+                <p>Thank you for your valuable contribution to Jordan's agricultural future!</p>
+                <p>Your suggestion has been received and will be reviewed by our expert panel. You'll receive an email confirmation shortly.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('successModal')">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/suggestions.js"></script>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</body>
+</html></section>
+
+        <!-- Suggestion Categories -->
+        <section class="suggestion-categories">
+            <div class="container">
+                <h2 class="section-title">How Can You Contribute?</h2>
+                <p class="section-subtitle">
+                    Choose the type of contribution that matches your expertise and interests
+                </p>
+
+                <div class="categories-grid">
+                    <div class="category-card" data-category="innovation">
+                        <div class="category-icon">💡</div>
+                        <h3>Innovation Ideas</h3>
+                        <p>Share new farming techniques, technologies, or innovative solutions for Jordan's agricultural challenges.</p>
+                        <ul class="category-examples">
+                            <li>New irrigation methods</li>
+                            <li>Crop varieties for arid climates</li>
+                            <li>Technology applications</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('innovation')">Share Innovation</button>
+                    </div>
+
+                    <div class="category-card" data-category="experience">
+                        <div class="category-icon">🌾</div>
+                        <h3>Field Experience</h3>
+                        <p>Document your farming experiences, successes, failures, and lessons learned in Jordan's diverse regions.</p>
+                        <ul class="category-examples">
+                            <li>Successful crop rotations</li>
+                            <li>Disease management strategies</li>
+                            <li>Water conservation techniques</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('experience')">Share Experience</button>
+                    </div>
+
+                    <div class="category-card" data-category="data">
+                        <div class="category-icon">📊</div>
+                        <h3>Data Contribution</h3>
+                        <p>Submit agricultural data, measurements, or observations to improve our collective knowledge base.</p>
+                        <ul class="category-examples">
+                            <li>Yield measurements</li>
+                            <li>Weather observations</li>
+                            <li>Soil test results</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('data')">Contribute Data</button>
+                    </div>
+
+                    <div class="category-card" data-category="policy">
+                        <div class="category-icon">🏛️</div>
+                        <h3>Policy Suggestions</h3>
+                        <p>Propose policy changes, regulations, or government initiatives to support sustainable agriculture.</p>
+                        <ul class="category-examples">
+                            <li>Subsidy programs</li>
+                            <li>Research funding</li>
+                            <li>Training initiatives</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('policy')">Suggest Policy</button>
+                    </div>
+
+                    <div class="category-card" data-category="collaboration">
+                        <div class="category-icon">🤝</div>
+                        <h3>Partnership Ideas</h3>
+                        <p>Propose collaborations, partnerships, or community initiatives to strengthen Jordan's agricultural sector.</p>
+                        <ul class="category-examples">
+                            <li>Farmer cooperatives</li>
+                            <li>Research partnerships</li>
+                            <li>Educational programs</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('collaboration')">Propose Partnership</button>
+                    </div>
+
+                    <div class="category-card" data-category="problem">
+                        <div class="category-icon">⚠️</div>
+                        <h3>Problem Reports</h3>
+                        <p>Report challenges, issues, or problems that need attention in Jordan's agricultural system.</p>
+                        <ul class="category-examples">
+                            <li>Infrastructure issues</li>
+                            <li>Market access problems</li>
+                            <li>Resource shortages</li>
+                        </ul>
+                        <button class="category-btn" onclick="selectCategory('problem')">Report Problem</button>
+                    </div>
+                </div>
+            </div>

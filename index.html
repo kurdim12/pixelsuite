@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Security Jordan - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Advancing food security and sustainable agriculture in Jordan through innovation, data-driven insights, and modern farming techniques">
+    <meta name="keywords" content="Jordan agriculture, food security, sustainable farming, irrigation, vertical farming, crop database, plant health">
+    <meta name="author" content="Food Security Jordan">
+    <meta name="theme-color" content="#2D7A4F">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="Food Security Jordan - Sustainable Agriculture & Innovation">
+    <meta property="og:description" content="Advancing food security and sustainable agriculture in Jordan through innovation, data-driven insights, and modern farming techniques">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foodsecurityjo.vercel.app/">
+    <meta property="og:site_name" content="Food Security Jordan">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Food Security Jordan - Sustainable Agriculture & Innovation">
+    <meta name="twitter:description" content="Advancing food security and sustainable agriculture in Jordan through innovation, data-driven insights, and modern farming techniques">
+    <meta name="twitter:site" content="@foodsecurityjo">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Food Security Jordan",
+      "description": "Advancing food security and sustainable agriculture in Jordan",
+      "url": "https://foodsecurityjo.vercel.app/",
+      "logo": "https://foodsecurityjo.vercel.app/assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png",
+      "sameAs": []
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=80&auto=format&fit=crop&ixlib=rb-4.0.3" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link" role="menuitem">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link" role="menuitem">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link" role="menuitem">Suggestions</a></li>
+                </ul>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Content Progress Badge -->
+    <div class="content-progress" aria-live="polite" aria-label="Reading progress">
+        <span class="progress-text">0%</span>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Hero Section -->
+        <section class="hero particle-container" aria-label="Welcome to Food Security Jordan">
+          <div class="hero-background">
+    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3" alt="" loading="eager" decoding="async" aria-hidden="true"
+         width="1920" height="1080" style="aspect-ratio: 16/9;" class="animate-float">
+    <div class="hero-overlay"></div>
+</div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge animate-fade-in">
+                        <span class="badge-icon">🇯🇴</span>
+                        <span>Jordan's Agricultural Innovation Hub</span>
+                    </div>
+                    <h1 class="hero-title animate-slide-up">
+                        Transforming
+                        <span class="highlight gradient-text">Food Security</span>
+                        in the Kingdom
+                    </h1>
+                    <p class="hero-subtitle animate-fade-in" data-typing>
+                        Harnessing cutting-edge technology, sustainable practices, and data-driven insights to revolutionize Jordan's agricultural landscape. From the fertile Jordan Valley to innovative vertical farms - we're cultivating the future of food security.
+                    </p>
+
+                    <div class="hero-stats animate-slide-up">
+                        <div class="hero-stat">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Million Olive Trees</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number" data-target="85">0</div>
+                            <div class="stat-label">Thousand Hectares</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number" data-target="95">0</div>
+                            <div class="stat-label">% Water Efficiency</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions animate-slide-up">
+                        <a href="crops.html" class="btn btn-primary btn-glow" aria-describedby="crops-desc">
+                            <span class="btn-icon">🌾</span>
+                            <span>Explore Crops Database</span>
+                            <span class="btn-shimmer"></span>
+                        </a>
+                        <a href="dashboard.html" class="btn btn-secondary btn-magnetic" aria-describedby="dashboard-desc">
+                            <span class="btn-icon">📊</span>
+                            <span>View Dashboard</span>
+                        </a>
+                        <a href="#agriculture-map" class="btn btn-outline scroll-btn">
+                            <span class="btn-icon">🗺️</span>
+                            <span>Explore Map</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-scroll-indicator">
+                        <div class="scroll-arrow animate-bounce">
+                            <span>↓</span>
+                        </div>
+                        <span class="scroll-text">Discover More</span>
+                    </div>
+
+                    <div class="sr-only">
+                        <p id="crops-desc">Browse comprehensive database of Jordan's agricultural crops and native plants</p>
+                        <p id="dashboard-desc">Access real-time agricultural data and insights dashboard</p>
+                    </div>
+                </div>
+
+                <div class="hero-floating-elements">
+                    <div class="floating-element floating-1">🌾</div>
+                    <div class="floating-element floating-2">💧</div>
+                    <div class="floating-element floating-3">🌱</div>
+                    <div class="floating-element floating-4">🌿</div>
+                    <div class="floating-element floating-5">🌳</div>
+                </div>
+            </div>
+            <div class="scroll-indicator animate-bounce" aria-hidden="true">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats track" aria-labelledby="stats-title">
+            <div class="container">
+                <h2 id="stats-title" class="section-title">Jordan Agriculture at a Glance</h2>
+                <p class="section-subtitle">
+                    Key metrics showcasing the current state and potential of Jordan's agricultural sector
+                </p>
+                <div class="stats-grid" role="group" aria-label="Agricultural statistics">
+                    <div class="stat-card glass-card animate-float" role="img" aria-labelledby="stat1-label" aria-describedby="stat1-desc">
+                        <div class="stat-icon animate-pulse" aria-hidden="true">🌾</div>
+                        <div class="stat-number" data-target="1247" aria-live="polite">0</div>
+                        <div class="stat-label" id="stat1-label">Crop Varieties</div>
+                        <div class="stat-description" id="stat1-desc">Documented across all regions and climate zones</div>
+                    </div>
+                    <div class="stat-card glass-card animate-float-reverse" role="img" aria-labelledby="stat2-label" aria-describedby="stat2-desc">
+                        <div class="stat-icon animate-pulse" aria-hidden="true">💧</div>
+                        <div class="stat-number" data-target="78" aria-live="polite">0</div>
+                        <div class="stat-label" id="stat2-label">Water Efficiency %</div>
+                        <div class="stat-description" id="stat2-desc">Achieved through modern drip irrigation systems</div>
+                    </div>
+                    <div class="stat-card glass-card animate-float" role="img" aria-labelledby="stat3-label" aria-describedby="stat3-desc">
+                        <div class="stat-icon animate-pulse" aria-hidden="true">🏞️</div>
+                        <div class="stat-number" data-target="12" aria-live="polite">0</div>
+                        <div class="stat-label" id="stat3-label">Governorates</div>
+                        <div class="stat-description" id="stat3-desc">With active agricultural production zones</div>
+                    </div>
+                    <div class="stat-card glass-card animate-float-reverse" role="img" aria-labelledby="stat4-label" aria-describedby="stat4-desc">
+                        <div class="stat-icon animate-pulse" aria-hidden="true">📈</div>
+                        <div class="stat-number" data-target="42" aria-live="polite">0</div>
+                        <div class="stat-label" id="stat4-label">Yield Increase %</div>
+                        <div class="stat-description" id="stat4-desc">Via precision farming and smart agriculture</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="quick-links track" aria-labelledby="resources-title">
+            <div class="container">
+                <h2 id="resources-title" class="section-title">Explore Our Resources</h2>
+                <p class="section-subtitle">
+                    Discover comprehensive data, insights, and tools for sustainable agriculture in Jordan
+                </p>
+                <div class="links-grid" role="group" aria-label="Resource navigation">
+                    <a href="agriculture.html" class="link-card glass-card animate-slide-in-left" aria-describedby="agri-desc">
+                        <div class="link-icon animate-float" aria-hidden="true">🚜</div>
+                        <h3>Agriculture Systems</h3>
+                        <p id="agri-desc">Explore traditional and modern farming methods across Jordan's diverse agricultural regions</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                    <a href="irrigation.html" class="link-card glass-card animate-slide-in-right" aria-describedby="irri-desc">
+                        <div class="link-icon animate-float-reverse" aria-hidden="true">💧</div>
+                        <h3>Irrigation Methods</h3>
+                        <p id="irri-desc">Water-efficient irrigation techniques optimized for Jordan's arid climate conditions</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                    <a href="crops.html" class="link-card glass-card animate-slide-in-left" aria-describedby="crops-desc">
+                        <div class="link-icon animate-float" aria-hidden="true">🌱</div>
+                        <h3>Crop Database</h3>
+                        <p id="crops-desc">Comprehensive searchable database of crops, native plants, and agricultural varieties</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                    <a href="vertical.html" class="link-card glass-card animate-slide-in-right" aria-describedby="vertical-desc">
+                        <div class="link-icon animate-float-reverse" aria-hidden="true">🏢</div>
+                        <h3>Vertical Farming</h3>
+                        <p id="vertical-desc">Innovative urban agriculture and space-efficient farming solutions for food security</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                    <a href="diseases.html" class="link-card glass-card animate-slide-in-left" aria-describedby="health-desc">
+                        <div class="link-icon animate-float" aria-hidden="true">🔬</div>
+                        <h3>Plant Health</h3>
+                        <p id="health-desc">Disease monitoring, prevention strategies, and integrated crop protection methods</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                    <a href="dashboard.html" class="link-card glass-card animate-slide-in-right" aria-describedby="dash-desc">
+                        <div class="link-icon animate-float-reverse" aria-hidden="true">📊</div>
+                        <h3>Data Dashboard</h3>
+                        <p id="dash-desc">Real-time analytics, trends, and insights for informed agricultural decision-making</p>
+                        <span class="link-arrow animate-pulse" aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jordan Map Section -->
+        <section class="jordan-map-section track" aria-labelledby="map-title">
+            <div class="container">
+                <div class="map-header">
+                    <h2 id="map-title" class="section-title">Agricultural Regions of Jordan</h2>
+                    <p class="section-subtitle">
+                        Explore Jordan's diverse agricultural zones and their productivity across the kingdom's governorates
+                    </p>
+                </div>
+
+                <div class="map-container glass-card">
+                    <div id="jordan-map" class="map-display" aria-label="Interactive map of Jordan showing agricultural regions"></div>
+
+                    <div class="map-legend">
+                        <h3>Productivity Index</h3>
+                        <div class="legend-items">
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #38A169;"></span>
+                                <span>High (0.8+)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #D69E2E;"></span>
+                                <span>Medium (0.6-0.8)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color" style="background-color: #E53E3E;"></span>
+                                <span>Low (<0.6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-stats">
+                    <div class="map-stat">
+                        <div class="stat-number animate-pulse">12</div>
+                        <div class="stat-label">Governorates</div>
+                    </div>
+                    <div class="map-stat">
+                        <div class="stat-number animate-pulse">4,180</div>
+                        <div class="stat-label">Total Agricultural Area (km²)</div>
+                    </div>
+                    <div class="map-stat">
+                        <div class="stat-number animate-pulse">0.73</div>
+                        <div class="stat-label">Average Productivity Index</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- Dashboard Preview Section -->
+<section class="dashboard-preview track" aria-labelledby="insights-title">
+    <div class="container">
+        <div class="preview-header">
+            <div class="preview-text">
+                <h2 id="insights-title" class="section-title">Agricultural Insights</h2>
+                <p class="section-subtitle">
+                    Live data visualization showing key metrics and trends in Jordan's agricultural sector
+                </p>
+                <div class="preview-stats">
+                    <div class="preview-stat">
+                        <span class="preview-stat-number">156,000</span>
+                        <span class="preview-stat-label">Hectares Under Cultivation</span>
+                    </div>
+                    <div class="preview-stat">
+                        <span class="preview-stat-number">2.4M</span>
+                        <span class="preview-stat-label">Tons Annual Production</span>
+                    </div>
+                    <div class="preview-stat">
+                        <span class="preview-stat-number">85%</span>
+                        <span class="preview-stat-label">Irrigation Efficiency</span>
+                    </div>
+                </div>
+                <a href="dashboard.html" class="btn btn-outline">
+                    <span class="btn-icon">📈</span>
+                    View Full Dashboard
+                </a>
+            </div>
+            <div class="preview-chart">
+                <div class="chart-header">
+                    <h3>Crop Production by Region</h3>
+                    <span class="chart-period">Last 12 Months</span>
+                </div>
+                <div class="css-chart">
+                    <div class="chart-bar-group">
+                        <div class="chart-bars">
+                            <div class="chart-bar vegetables" style="height: 77%;" title="Vegetables: 15,400 tons"></div>
+                            <div class="chart-bar fruits" style="height: 44%;" title="Fruits: 8,700 tons"></div>
+                            <div class="chart-bar grains" style="height: 26%;" title="Grains: 5,200 tons"></div>
+                        </div>
+                        <span class="chart-label">Amman</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bars">
+                            <div class="chart-bar vegetables" style="height: 64%;" title="Vegetables: 12,800 tons"></div>
+                            <div class="chart-bar fruits" style="height: 47%;" title="Fruits: 9,400 tons"></div>
+                            <div class="chart-bar grains" style="height: 39%;" title="Grains: 7,800 tons"></div>
+                        </div>
+                        <span class="chart-label">Irbid</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bars">
+                            <div class="chart-bar vegetables" style="height: 46%;" title="Vegetables: 9,200 tons"></div>
+                            <div class="chart-bar fruits" style="height: 31%;" title="Fruits: 6,100 tons"></div>
+                            <div class="chart-bar grains" style="height: 22%;" title="Grains: 4,300 tons"></div>
+                        </div>
+                        <span class="chart-label">Zarqa</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bars">
+                            <div class="chart-bar vegetables" style="height: 93%;" title="Vegetables: 18,600 tons"></div>
+                            <div class="chart-bar fruits" style="height: 62%;" title="Fruits: 12,300 tons"></div>
+                            <div class="chart-bar grains" style="height: 35%;" title="Grains: 6,900 tons"></div>
+                        </div>
+                        <span class="chart-label">Balqa</span>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bars">
+                            <div class="chart-bar vegetables" style="height: 45%;" title="Vegetables: 8,900 tons"></div>
+                            <div class="chart-bar fruits" style="height: 59%;" title="Fruits: 11,800 tons"></div>
+                            <div class="chart-bar grains" style="height: 46%;" title="Grains: 9,200 tons"></div>
+                        </div>
+                        <span class="chart-label">Karak</span>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color vegetables"></span>
+                        <span>Vegetables</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color fruits"></span>
+                        <span>Fruits</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-color grains"></span>
+                        <span>Grains</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Impact Section -->
+        <section class="impact track" aria-labelledby="impact-title">
+            <div class="container">
+                <h2 id="impact-title" class="section-title">Our Impact</h2>
+                <p class="section-subtitle">
+                    Measurable improvements in Jordan's agricultural sustainability and food security
+                </p>
+                <div class="impact-grid">
+                    <div class="impact-card glass-card animate-scale-in">
+                        <div class="impact-icon animate-float">🌍</div>
+                        <h3>Environmental Sustainability</h3>
+                        <ul class="impact-list">
+                            <li>35% reduction in water consumption through smart irrigation</li>
+                            <li>50% decrease in chemical pesticide usage</li>
+                            <li>28% improvement in soil health indicators</li>
+                        </ul>
+                    </div>
+                    <div class="impact-card glass-card animate-scale-in">
+                        <div class="impact-icon animate-float-reverse">🚀</div>
+                        <h3>Innovation & Technology</h3>
+                        <ul class="impact-list">
+                            <li>IoT sensors deployed across 500+ farms</li>
+                            <li>AI-powered crop monitoring systems active</li>
+                            <li>Drone surveillance covering 75,000 hectares</li>
+                        </ul>
+                    </div>
+                    <div class="impact-card glass-card animate-scale-in">
+                        <div class="impact-icon animate-float">👥</div>
+                        <h3>Community Empowerment</h3>
+                        <ul class="impact-list">
+                            <li>2,500+ farmers trained in modern techniques</li>
+                            <li>120 agricultural cooperatives established</li>
+                            <li>60% increase in rural household income</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta track" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Join the Movement</h2>
+                    <p>
+                        Help us build a more sustainable and food-secure Jordan. Share your insights, 
+                        contribute data, and collaborate with our growing community of agricultural innovators.
+                    </p>
+                    <div class="cta-features">
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">💡</span>
+                            <span>Share innovative farming ideas</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">📊</span>
+                            <span>Contribute agricultural data</span>
+                        </div>
+                        <div class="cta-feature">
+                            <span class="cta-feature-icon">🤝</span>
+                            <span>Connect with fellow farmers</span>
+                        </div>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="suggestions.html" class="btn btn-primary">
+                            <span class="btn-icon">💬</span>
+                            Share Your Ideas
+                        </a>
+                        <a href="dashboard.html" class="btn btn-secondary">
+                            <span class="btn-icon">📋</span>
+                            Explore Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Provenance Strip -->
+        <section class="provenance" aria-labelledby="provenance-title">
+            <div class="container">
+                <div class="provenance-content">
+                    <h3 id="provenance-title" class="provenance-title">Trusted Data Sources</h3>
+                    <div class="provenance-sources">
+                        <div class="provenance-source">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Coat_of_arms_of_Jordan.svg/200px-Coat_of_arms_of_Jordan.svg.png" alt="Ministry of Agriculture"
+                                 width="60" height="40" loading="lazy">
+                            <span>Ministry of Agriculture</span>
+                        </div>
+                        <div class="provenance-source">
+                            <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=120&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Jordan Valley Authority"
+                                 width="60" height="40" loading="lazy">
+                            <span>Jordan Valley Authority</span>
+                        </div>
+                        <div class="provenance-source">
+                            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=120&auto=format&fit=crop&ixlib=rb-4.0.3" alt="National Center for Agricultural Research"
+                                 width="60" height="40" loading="lazy">
+                            <span>NCARE</span>
+                        </div>
+                        <div class="provenance-source">
+                            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=120&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Jordan University of Science and Technology"
+                                 width="60" height="40" loading="lazy">
+                            <span>JUST Agricultural Research</span>
+                        </div>
+                        <div class="provenance-source">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/FAO_logo.svg/200px-FAO_logo.svg.png" alt="Food and Agriculture Organization"
+                                 width="60" height="40" loading="lazy">
+                            <span>FAO Jordan</span>
+                        </div>
+                    </div>
+                    <p class="provenance-note">
+                        All data is regularly updated and verified by these trusted governmental and international organizations.
+                        Last updated: <time datetime="2025-01-15">January 15, 2025</time>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=64&auto=format&fit=crop&ixlib=rb-4.0.3" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>
+                        Advancing sustainable agriculture and food security across Jordan through 
+                        innovation, collaboration, and data-driven insights.
+                    </p>
+                    <div class="footer-social" aria-label="Social links">
+                        <!-- Social links would go here -->
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="agriculture.html">Agriculture Systems</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Irrigation Methods</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.moa.gov.jo/" aria-describedby="external-link">Ministry of Agriculture</a></li>
+                        <li><a href="https://www.mwi.gov.jo/EBV4.0/Root_Storage/AR/EB_Tenders/PQ__jordan.pdf" aria-describedby="external-link">Jordan Valley Authority</a></li>
+                        <li><a href="https://www.narc.gov.jo/Default/En" aria-describedby="external-link">Agricultural Research Centers</a></li>
+                    </ul>
+                    <div id="external-link" class="sr-only">Opens in new window</div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built with sustainability in mind</span>
+                        <span>•</span>
+                        <button class="footer-accessibility" aria-label="Accessibility options">Accessibility</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/db.js" defer></script>
+    <script src="js/charts.js" defer></script>
+    <script src="js/splash.js" defer></script>
+    <script src="js/map.js" defer></script>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</body>
+</html>

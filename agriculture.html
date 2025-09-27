@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Systems - Food Security Jordan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/agriculture.css">
+    <meta name="description" content="Explore traditional and modern farming methods across Jordan's diverse agricultural regions">
+    <meta name="theme-color" content="#226646">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link active" role="menuitem" aria-current="page">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link" role="menuitem">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link" role="menuitem">Suggestions</a></li>
+                </ul>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Hero Section -->
+        <section class="agriculture-hero" aria-label="Agriculture Systems in Jordan">
+            <div class="hero-background">
+                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="" loading="eager" decoding="async" aria-hidden="true" 
+                     width="1920" height="1080" style="aspect-ratio: 16/9;">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Agriculture Systems in 
+                        <span class="highlight">Jordan</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        From traditional farming methods to cutting-edge precision agriculture, 
+                        discover how Jordan adapts to its unique climate and geographic challenges.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="farmCount">2,847</span>
+                            <span class="stat-label">Active Farms</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="areaCount">156,000</span>
+                            <span class="stat-label">Hectares</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="farmerCount">45,000</span>
+                            <span class="stat-label">Farmers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agriculture Systems Overview -->
+        <section class="systems-overview track" aria-labelledby="systems-title">
+            <div class="container">
+                <h2 id="systems-title" class="section-title">Agricultural Systems</h2>
+                <p class="section-subtitle">
+                    Jordan employs diverse farming systems adapted to different regions and climatic conditions
+                </p>
+                
+                <div class="systems-grid">
+                    <div class="system-card traditional">
+                        <div class="system-header">
+                            <div class="system-icon">🏺</div>
+                            <h3>Traditional Farming</h3>
+                            <span class="system-adoption">65% adoption</span>
+                        </div>
+                        <div class="system-content">
+                            <p>Time-tested methods passed down through generations, emphasizing crop rotation, natural fertilizers, and sustainable practices.</p>
+                            <div class="system-features">
+                                <div class="feature">
+                                    <span class="feature-icon">🌾</span>
+                                    <span>Crop rotation systems</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🐄</span>
+                                    <span>Integrated livestock</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🌿</span>
+                                    <span>Organic fertilizers</span>
+                                </div>
+                            </div>
+                            <div class="system-regions">
+                                <span class="region-tag">Highlands</span>
+                                <span class="region-tag">Rural Areas</span>
+                                <span class="region-tag">Mafraq</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-card modern">
+                        <div class="system-header">
+                            <div class="system-icon">🚜</div>
+                            <h3>Modern Mechanized</h3>
+                            <span class="system-adoption">45% adoption</span>
+                        </div>
+                        <div class="system-content">
+                            <p>Mechanized farming with modern equipment, chemical inputs, and optimized planting schedules for maximum efficiency.</p>
+                            <div class="system-features">
+                                <div class="feature">
+                                    <span class="feature-icon">🚜</span>
+                                    <span>Heavy machinery</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🧪</span>
+                                    <span>Synthetic fertilizers</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">📊</span>
+                                    <span>Yield optimization</span>
+                                </div>
+                            </div>
+                            <div class="system-regions">
+                                <span class="region-tag">Jordan Valley</span>
+                                <span class="region-tag">Zarqa</span>
+                                <span class="region-tag">Balqa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-card precision">
+                        <div class="system-header">
+                            <div class="system-icon">🛰️</div>
+                            <h3>Precision Agriculture</h3>
+                            <span class="system-adoption">25% adoption</span>
+                        </div>
+                        <div class="system-content">
+                            <p>High-tech farming using GPS, sensors, and data analytics to optimize every aspect of crop production.</p>
+                            <div class="system-features">
+                                <div class="feature">
+                                    <span class="feature-icon">📡</span>
+                                    <span>GPS guidance</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🤖</span>
+                                    <span>Automated systems</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">📱</span>
+                                    <span>Smart monitoring</span>
+                                </div>
+                            </div>
+                            <div class="system-regions">
+                                <span class="region-tag">Amman</span>
+                                <span class="region-tag">Irbid</span>
+                                <span class="region-tag">Aqaba</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-card hydroponic">
+                        <div class="system-header">
+                            <div class="system-icon">🧬</div>
+                            <h3>Hydroponic Systems</h3>
+                            <span class="system-adoption">15% adoption</span>
+                        </div>
+                        <div class="system-content">
+                            <p>Soilless cultivation methods using nutrient solutions, ideal for water-scarce environments and controlled conditions.</p>
+                            <div class="system-features">
+                                <div class="feature">
+                                    <span class="feature-icon">💧</span>
+                                    <span>Water efficiency</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🏠</span>
+                                    <span>Controlled environment</span>
+                                </div>
+                                <div class="feature">
+                                    <span class="feature-icon">🌱</span>
+                                    <span>Year-round production</span>
+                                </div>
+                            </div>
+                            <div class="system-regions">
+                                <span class="region-tag">Urban Areas</span>
+                                <span class="region-tag">Desert Regions</span>
+                                <span class="region-tag">Greenhouses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Regional Agriculture -->
+        <section class="regional-agriculture track" aria-labelledby="regional-title">
+            <div class="container">
+                <h2 id="regional-title" class="section-title">Agriculture by Region</h2>
+                <p class="section-subtitle">
+                    Each region of Jordan has unique agricultural characteristics and specializations
+                </p>
+                
+                <div class="regional-selector">
+                    <button class="region-btn active" data-region="jordan-valley">Jordan Valley</button>
+                    <button class="region-btn" data-region="highlands">Highlands</button>
+                    <button class="region-btn" data-region="eastern-desert">Eastern Desert</button>
+                    <button class="region-btn" data-region="southern-regions">Southern Regions</button>
+                </div>
+
+                <div class="regional-content">
+                    <div class="region-panel active" id="jordan-valley">
+                        <div class="region-info">
+                            <div class="region-details">
+                                <h3>Jordan Valley</h3>
+                                <p>The most fertile and productive agricultural region, benefiting from the Jordan River and favorable climate conditions.</p>
+                                <div class="region-stats">
+                                    <div class="region-stat">
+                                        <span class="stat-value">45%</span>
+                                        <span class="stat-label">Of national production</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">28,000</span>
+                                        <span class="stat-label">Hectares cultivated</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">85%</span>
+                                        <span class="stat-label">Irrigation efficiency</span>
+                                    </div>
+                                </div>
+                                <div class="region-crops">
+                                    <h4>Primary Crops</h4>
+                                    <div class="crop-tags">
+                                        <span class="crop-tag vegetables">Tomatoes</span>
+                                        <span class="crop-tag vegetables">Cucumbers</span>
+                                        <span class="crop-tag fruits">Bananas</span>
+                                        <span class="crop-tag fruits">Citrus</span>
+                                        <span class="crop-tag vegetables">Peppers</span>
+                                        <span class="crop-tag fruits">Dates</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="region-image">
+                                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Jordan Valley agriculture" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-panel" id="highlands">
+                        <div class="region-info">
+                            <div class="region-details">
+                                <h3>Northern & Central Highlands</h3>
+                                <p>Cooler climate and higher elevation suitable for cereals, olives, and stone fruits. Rain-fed agriculture predominates.</p>
+                                <div class="region-stats">
+                                    <div class="region-stat">
+                                        <span class="stat-value">35%</span>
+                                        <span class="stat-label">Of national production</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">75,000</span>
+                                        <span class="stat-label">Hectares cultivated</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">65%</span>
+                                        <span class="stat-label">Rain-fed farming</span>
+                                    </div>
+                                </div>
+                                <div class="region-crops">
+                                    <h4>Primary Crops</h4>
+                                    <div class="crop-tags">
+                                        <span class="crop-tag grains">Wheat</span>
+                                        <span class="crop-tag grains">Barley</span>
+                                        <span class="crop-tag fruits">Olives</span>
+                                        <span class="crop-tag fruits">Stone Fruits</span>
+                                        <span class="crop-tag legumes">Lentils</span>
+                                        <span class="crop-tag legumes">Chickpeas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="region-image">
+                                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Highland agriculture" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-panel" id="eastern-desert">
+                        <div class="region-info">
+                            <div class="region-details">
+                                <h3>Eastern Desert</h3>
+                                <p>Arid region with limited rainfall, focusing on drought-resistant crops and innovative irrigation techniques.</p>
+                                <div class="region-stats">
+                                    <div class="region-stat">
+                                        <span class="stat-value">12%</span>
+                                        <span class="stat-label">Of national production</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">35,000</span>
+                                        <span class="stat-label">Hectares cultivated</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">95%</span>
+                                        <span class="stat-label">Drip irrigation</span>
+                                    </div>
+                                </div>
+                                <div class="region-crops">
+                                    <h4>Primary Crops</h4>
+                                    <div class="crop-tags">
+                                        <span class="crop-tag grains">Durum Wheat</span>
+                                        <span class="crop-tag fruits">Desert Dates</span>
+                                        <span class="crop-tag vegetables">Desert Vegetables</span>
+                                        <span class="crop-tag herbs">Medicinal Plants</span>
+                                        <span class="crop-tag grains">Sorghum</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="region-image">
+                                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Eastern desert agriculture" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="region-panel" id="southern-regions">
+                        <div class="region-info">
+                            <div class="region-details">
+                                <h3>Southern Regions</h3>
+                                <p>Hot, arid climate with innovative greenhouse systems and specialized desert agriculture techniques.</p>
+                                <div class="region-stats">
+                                    <div class="region-stat">
+                                        <span class="stat-value">8%</span>
+                                        <span class="stat-label">Of national production</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">18,000</span>
+                                        <span class="stat-label">Hectares cultivated</span>
+                                    </div>
+                                    <div class="region-stat">
+                                        <span class="stat-value">75%</span>
+                                        <span class="stat-label">Greenhouse farming</span>
+                                    </div>
+                                </div>
+                                <div class="region-crops">
+                                    <h4>Primary Crops</h4>
+                                    <div class="crop-tags">
+                                        <span class="crop-tag vegetables">Greenhouse Tomatoes</span>
+                                        <span class="crop-tag vegetables">Peppers</span>
+                                        <span class="crop-tag fruits">Melons</span>
+                                        <span class="crop-tag herbs">Herbs</span>
+                                        <span class="crop-tag fruits">Desert Fruits</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="region-image">
+                                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Southern regions agriculture" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Farming Techniques -->
+        <section class="farming-techniques track" aria-labelledby="techniques-title">
+            <div class="container">
+                <h2 id="techniques-title" class="section-title">Key Farming Techniques</h2>
+                <p class="section-subtitle">
+                    Innovative methods adapted to Jordan's unique environmental challenges
+                </p>
+                
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <div class="technique-icon">💧</div>
+                        <h3>Water Conservation</h3>
+                        <p>Advanced drip irrigation and water recycling systems maximize efficiency in water-scarce environments.</p>
+                        <ul class="technique-benefits">
+                            <li>70% reduction in water usage</li>
+                            <li>Prevents soil erosion</li>
+                            <li>Precise nutrient delivery</li>
+                        </ul>
+                        <a href="irrigation.html" class="technique-link">Learn More →</a>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🌡️</div>
+                        <h3>Climate Adaptation</h3>
+                        <p>Heat-resistant varieties and controlled environments help crops thrive in extreme temperatures.</p>
+                        <ul class="technique-benefits">
+                            <li>Extended growing seasons</li>
+                            <li>Reduced crop stress</li>
+                            <li>Higher yield consistency</li>
+                        </ul>
+                        <a href="vertical.html" class="technique-link">Learn More →</a>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🔬</div>
+                        <h3>Soil Management</h3>
+                        <p>Soil testing, organic amendments, and precision fertilization maintain soil health and productivity.</p>
+                        <ul class="technique-benefits">
+                            <li>Improved soil structure</li>
+                            <li>Enhanced nutrient retention</li>
+                            <li>Sustainable productivity</li>
+                        </ul>
+                        <a href="crops.html" class="technique-link">Learn More →</a>
+                    </div>
+
+                    <div class="technique-card">
+                        <div class="technique-icon">🛡️</div>
+                        <h3>Pest Management</h3>
+                        <p>Integrated pest management combining biological, cultural, and selective chemical controls.</p>
+                        <ul class="technique-benefits">
+                            <li>Reduced pesticide use</li>
+                            <li>Protected beneficial insects</li>
+                            <li>Lower environmental impact</li>
+                        </ul>
+                        <a href="diseases.html" class="technique-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories track" aria-labelledby="success-title">
+            <div class="container">
+                <h2 id="success-title" class="section-title">Success Stories</h2>
+                <p class="section-subtitle">
+                    Real farmers sharing their experiences with modern agricultural techniques
+                </p>
+                
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Ahmed's farm" loading="lazy">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-header">
+                                <h3>Ahmed Al-Zahra</h3>
+                                <span class="story-location">Jordan Valley</span>
+                            </div>
+                            <p class="story-quote">
+                                "Switching to precision irrigation increased my tomato yield by 40% while reducing water consumption by half."
+                            </p>
+                            <div class="story-results">
+                                <div class="result">
+                                    <span class="result-value">+40%</span>
+                                    <span class="result-label">Yield Increase</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">-50%</span>
+                                    <span class="result-label">Water Usage</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">+60%</span>
+                                    <span class="result-label">Profit Margin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Fatima's farm" loading="lazy">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-header">
+                                <h3>Fatima Hassan</h3>
+                                <span class="story-location">Irbid Highlands</span>
+                            </div>
+                            <p class="story-quote">
+                                "Organic farming methods improved our soil health and commanded premium prices for our olive oil."
+                            </p>
+                            <div class="story-results">
+                                <div class="result">
+                                    <span class="result-value">+25%</span>
+                                    <span class="result-label">Premium Price</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">+35%</span>
+                                    <span class="result-label">Soil Quality</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">+45%</span>
+                                    <span class="result-label">Market Demand</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="Mohammad's greenhouse" loading="lazy">
+                        </div>
+                        <div class="story-content">
+                            <div class="story-header">
+                                <h3>Mohammad Khatib</h3>
+                                <span class="story-location">Mafraq Desert</span>
+                            </div>
+                            <p class="story-quote">
+                                "Greenhouse technology allowed us to grow vegetables year-round in the desert, creating a sustainable business."
+                            </p>
+                            <div class="story-results">
+                                <div class="result">
+                                    <span class="result-value">12</span>
+                                    <span class="result-label">Months Production</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">+200%</span>
+                                    <span class="result-label">Annual Output</span>
+                                </div>
+                                <div class="result">
+                                    <span class="result-value">+180%</span>
+                                    <span class="result-label">Family Income</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="agriculture-cta track" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-title">Transform Your Farm</h2>
+                    <p>
+                        Ready to implement modern agricultural techniques? Get connected with experts, 
+                        access resources, and join Jordan's agricultural revolution.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="suggestions.html" class="btn btn-primary">
+                            <span class="btn-icon">💬</span>
+                            Get Expert Advice
+                        </a>
+                        <a href="dashboard.html" class="btn btn-secondary">
+                            <span class="btn-icon">📊</span>
+                            Access Data Tools
+                        </a>
+                        <a href="crops.html" class="btn btn-outline">
+                            <span class="btn-icon">🌾</span>
+                            Browse Crops
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>
+                        Advancing sustainable agriculture and food security across Jordan through 
+                        innovation, collaboration, and data-driven insights.
+                    </p>
+                    <div class="footer-social" aria-label="Social links">
+                        <!-- Social links would go here -->
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="agriculture.html">Agriculture Systems</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Irrigation Methods</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.moa.gov.jo/" aria-describedby="external-link">Ministry of Agriculture</a></li>
+                        <li><a href="https://www.mwi.gov.jo/EBV4.0/Root_Storage/AR/EB_Tenders/PQ__jordan.pdf" aria-describedby="external-link">Jordan Valley Authority</a></li>
+                        <li><a href="https://www.narc.gov.jo/Default/En" aria-describedby="external-link">Agricultural Research Centers</a></li>
+                    </ul>
+                    <div id="external-link" class="sr-only">Opens in new window</div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built with sustainability in mind</span>
+                        <span>•</span>
+                        <button class="footer-accessibility" aria-label="Accessibility options">Accessibility</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/db.js" defer></script>
+    <script>
+        // Agriculture Page JavaScript
+        class AgriculturePage {
+            constructor() {
+                this.currentRegion = 'jordan-valley';
+                this.init();
+            }
+
+            init() {
+                this.setupRegionalSelector();
+                this.animateStats();
+            }
+
+            setupRegionalSelector() {
+                const regionButtons = document.querySelectorAll('.region-btn');
+                const regionPanels = document.querySelectorAll('.region-panel');
+
+                regionButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetRegion = button.dataset.region;
+                        
+                        // Update active button
+                        regionButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Update active panel
+                        regionPanels.forEach(panel => {
+                            panel.classList.remove('active');
+                            if (panel.id === targetRegion) {
+                                panel.classList.add('active');
+                            }
+                        });
+                        
+                        this.currentRegion = targetRegion;
+                    });
+                });
+            }
+
+            animateStats() {
+                const statNumbers = document.querySelectorAll('.stat-number');
+                
+                const animateValue = (element, start, end, duration) => {
+                    const range = end - start;
+                    const increment = end > start ? 1 : -1;
+                    const stepTime = Math.abs(Math.floor(duration / range));
+                    let current = start;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        element.textContent = current.toLocaleString();
+                        
+                        if (current === end) {
+                            clearInterval(timer);
+                        }
+                    }, stepTime);
+                };
+
+                // Animate hero stats
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const element = entry.target;
+                            const finalValue = parseInt(element.textContent.replace(/,/g, ''));
+                            element.textContent = '0';
+                            animateValue(element, 0, finalValue, 2000);
+                            observer.unobserve(element);
+                        }
+                    });
+                });
+
+                statNumbers.forEach(stat => {
+                    observer.observe(stat);
+                });
+            }
+        }
+
+        // Initialize agriculture page when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new AgriculturePage();
+        });
+    </script>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</body>
+</html>

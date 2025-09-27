@@ -1,0 +1,906 @@
+{
+  "metadata": {
+    "country": "Jordan",
+    "currency": "JOD",
+    "lastUpdated": "2025-09-27",
+    "dataSource": "Ministry of Agriculture Jordan, FAO, World Bank",
+    "version": "1.0.0"
+  },
+  "crops": [
+    {
+      "id": 1,
+      "name": "Olive",
+      "arabicName": "زيتون",
+      "scientificName": "Olea europaea",
+      "category": "fruits",
+      "waterRequirement": "low",
+      "economicValue": "high",
+      "seasons": ["spring", "summer", "fall"],
+      "traits": ["drought-resistant", "traditional", "export-potential"],
+      "description": "Jordan's most important traditional crop, cultivated for over 4,000 years",
+      "cultivationArea": 650000,
+      "averageYield": 1.2,
+      "pricePerKg": 3.5,
+      "exportValue": 45000000,
+      "regions": ["North", "Central", "Ajloun", "Jerash"],
+      "soilType": ["clay", "limestone"],
+      "plantingDepth": "0.5-1m",
+      "spacing": "6x6m",
+      "harvestTime": "October-December"
+    },
+    {
+      "id": 2,
+      "name": "Tomato",
+      "arabicName": "طماطم",
+      "scientificName": "Solanum lycopersicum",
+      "category": "vegetables",
+      "waterRequirement": "medium",
+      "economicValue": "high",
+      "seasons": ["spring", "summer", "fall"],
+      "traits": ["high-yield", "greenhouse-suitable", "export-potential"],
+      "description": "Major vegetable crop with high economic returns in Jordan",
+      "cultivationArea": 12500,
+      "averageYield": 45,
+      "pricePerKg": 0.8,
+      "exportValue": 15000000,
+      "regions": ["Jordan Valley", "Highlands"],
+      "soilType": ["sandy-loam", "clay-loam"],
+      "plantingDepth": "1-2cm",
+      "spacing": "50x40cm",
+      "harvestTime": "May-October"
+    },
+    {
+      "id": 3,
+      "name": "Wheat",
+      "arabicName": "قمح",
+      "scientificName": "Triticum aestivum",
+      "category": "cereals",
+      "waterRequirement": "medium",
+      "economicValue": "high",
+      "seasons": ["winter", "spring"],
+      "traits": ["staple-food", "drought-tolerant", "strategic-crop"],
+      "description": "Essential cereal crop for food security in Jordan",
+      "cultivationArea": 25000,
+      "averageYield": 2.1,
+      "pricePerKg": 0.45,
+      "exportValue": 0,
+      "regions": ["Mafraq", "Karak", "Central"],
+      "soilType": ["clay", "sandy-clay"],
+      "plantingDepth": "3-5cm",
+      "spacing": "broadcast",
+      "harvestTime": "May-June"
+    },
+    {
+      "id": 4,
+      "name": "Barley",
+      "arabicName": "شعير",
+      "scientificName": "Hordeum vulgare",
+      "category": "cereals",
+      "waterRequirement": "low",
+      "economicValue": "medium",
+      "seasons": ["winter", "spring"],
+      "traits": ["drought-resistant", "livestock-feed", "traditional"],
+      "description": "Hardy cereal crop adapted to Jordan's arid conditions",
+      "cultivationArea": 35000,
+      "averageYield": 1.8,
+      "pricePerKg": 0.35,
+      "exportValue": 0,
+      "regions": ["Eastern Desert", "Mafraq", "Karak"],
+      "soilType": ["sandy", "clay"],
+      "plantingDepth": "3-4cm",
+      "spacing": "broadcast",
+      "harvestTime": "April-May"
+    },
+    {
+      "id": 5,
+      "name": "Cucumber",
+      "arabicName": "خيار",
+      "scientificName": "Cucumis sativus",
+      "category": "vegetables",
+      "waterRequirement": "high",
+      "economicValue": "medium",
+      "seasons": ["spring", "summer", "fall"],
+      "traits": ["greenhouse-suitable", "high-yield", "export-potential"],
+      "description": "Popular vegetable crop grown in protected agriculture",
+      "cultivationArea": 3200,
+      "averageYield": 35,
+      "pricePerKg": 0.6,
+      "exportValue": 8000000,
+      "regions": ["Jordan Valley", "Highlands"],
+      "soilType": ["sandy-loam", "well-drained"],
+      "plantingDepth": "1-2cm",
+      "spacing": "100x30cm",
+      "harvestTime": "Year-round"
+    },
+    {
+      "id": 6,
+      "name": "Eggplant",
+      "arabicName": "باذنجان",
+      "scientificName": "Solanum melongena",
+      "category": "vegetables",
+      "waterRequirement": "medium",
+      "economicValue": "medium",
+      "seasons": ["spring", "summer"],
+      "traits": ["heat-tolerant", "traditional", "greenhouse-suitable"],
+      "description": "Traditional vegetable well-adapted to Jordan's climate",
+      "cultivationArea": 2800,
+      "averageYield": 28,
+      "pricePerKg": 0.7,
+      "exportValue": 3000000,
+      "regions": ["Jordan Valley", "Central"],
+      "soilType": ["sandy-loam", "clay-loam"],
+      "plantingDepth": "0.5-1cm",
+      "spacing": "75x50cm",
+      "harvestTime": "June-October"
+    },
+    {
+      "id": 7,
+      "name": "Fig",
+      "arabicName": "تين",
+      "scientificName": "Ficus carica",
+      "category": "fruits",
+      "waterRequirement": "low",
+      "economicValue": "medium",
+      "seasons": ["summer", "fall"],
+      "traits": ["drought-resistant", "traditional", "medicinal"],
+      "description": "Ancient fruit tree well-suited to Jordan's Mediterranean climate",
+      "cultivationArea": 8500,
+      "averageYield": 8,
+      "pricePerKg": 2.5,
+      "exportValue": 2500000,
+      "regions": ["North", "Ajloun", "Central"],
+      "soilType": ["clay", "limestone", "well-drained"],
+      "plantingDepth": "tree",
+      "spacing": "4x4m",
+      "harvestTime": "July-September"
+    },
+    {
+      "id": 8,
+      "name": "Grape",
+      "arabicName": "عنب",
+      "scientificName": "Vitis vinifera",
+      "category": "fruits",
+      "waterRequirement": "medium",
+      "economicValue": "high",
+      "seasons": ["spring", "summer"],
+      "traits": ["traditional", "wine-making", "export-potential"],
+      "description": "Historic fruit crop with potential for premium products",
+      "cultivationArea": 5200,
+      "averageYield": 12,
+      "pricePerKg": 1.8,
+      "exportValue": 4000000,
+      "regions": ["North", "Central", "Karak"],
+      "soilType": ["limestone", "clay-loam"],
+      "plantingDepth": "vine",
+      "spacing": "3x2m",
+      "harvestTime": "August-October"
+    },
+    {
+      "id": 9,
+      "name": "Onion",
+      "arabicName": "بصل",
+      "scientificName": "Allium cepa",
+      "category": "vegetables",
+      "waterRequirement": "medium",
+      "economicValue": "medium",
+      "seasons": ["fall", "winter", "spring"],
+      "traits": ["storage-crop", "export-potential", "traditional"],
+      "description": "Important vegetable crop with good storage properties",
+      "cultivationArea": 4500,
+      "averageYield": 25,
+      "pricePerKg": 0.5,
+      "exportValue": 5000000,
+      "regions": ["Jordan Valley", "Central"],
+      "soilType": ["sandy-loam", "well-drained"],
+      "plantingDepth": "1-2cm",
+      "spacing": "30x10cm",
+      "harvestTime": "April-June"
+    },
+    {
+      "id": 10,
+      "name": "Potato",
+      "arabicName": "بطاطا",
+      "scientificName": "Solanum tuberosum",
+      "category": "vegetables",
+      "waterRequirement": "high",
+      "economicValue": "high",
+      "seasons": ["fall", "winter", "spring"],
+      "traits": ["staple-food", "high-yield", "export-potential"],
+      "description": "Important food security crop with high nutritional value",
+      "cultivationArea": 6800,
+      "averageYield": 32,
+      "pricePerKg": 0.6,
+      "exportValue": 12000000,
+      "regions": ["Jordan Valley", "Highlands"],
+      "soilType": ["sandy-loam", "well-drained"],
+      "plantingDepth": "10-15cm",
+      "spacing": "75x30cm",
+      "harvestTime": "March-June"
+    },
+    {
+      "id": 11,
+      "name": "Lemon",
+      "arabicName": "ليمون",
+      "scientificName": "Citrus limon",
+      "category": "fruits",
+      "waterRequirement": "high",
+      "economicValue": "high",
+      "seasons": ["year-round"],
+      "traits": ["citrus", "export-potential", "medicinal"],
+      "description": "High-value citrus crop suitable for Jordan Valley",
+      "cultivationArea": 1800,
+      "averageYield": 25,
+      "pricePerKg": 1.2,
+      "exportValue": 3500000,
+      "regions": ["Jordan Valley"],
+      "soilType": ["sandy-loam", "well-drained"],
+      "plantingDepth": "tree",
+      "spacing": "5x5m",
+      "harvestTime": "Year-round"
+    },
+    {
+      "id": 12,
+      "name": "Almond",
+      "arabicName": "لوز",
+      "scientificName": "Prunus dulcis",
+      "category": "nuts",
+      "waterRequirement": "low",
+      "economicValue": "high",
+      "seasons": ["spring"],
+      "traits": ["drought-resistant", "traditional", "export-potential"],
+      "description": "Traditional nut crop with high economic value",
+      "cultivationArea": 3500,
+      "averageYield": 1.5,
+      "pricePerKg": 8.0,
+      "exportValue": 6000000,
+      "regions": ["North", "Central"],
+      "soilType": ["limestone", "well-drained"],
+      "plantingDepth": "tree",
+      "spacing": "6x6m",
+      "harvestTime": "August-September"
+    }
+  ],
+  "agriculture": {
+    "totalLandArea": 89000,
+    "agriculturalLand": 11500,
+    "irrigatedLand": 800,
+    "rainfedLand": 2700,
+    "forestLand": 1000,
+    "yieldIncrease": 18,
+    "organicFarms": 145,
+    "cooperatives": 287,
+    "farmers": 45000,
+    "exportValue": 128000000,
+    "foodSecurityIndex": 68,
+    "waterUsageEfficiency": 75,
+    "soilTypes": {
+      "clay": 35,
+      "sandy-loam": 28,
+      "limestone": 22,
+      "sandy": 15
+    },
+    "challenges": [
+      "Water scarcity",
+      "Climate change",
+      "Soil degradation",
+      "Market access",
+      "Technology adoption"
+    ]
+  },
+  "irrigation": {
+    "totalProjects": 45,
+    "modernIrrigationCoverage": 65,
+    "waterSavings": 30,
+    "dripIrrigationArea": 15000,
+    "sprinklerIrrigationArea": 8500,
+    "projects": [
+      {
+        "id": 1,
+        "name": "Jordan Valley Modernization",
+        "type": "drip-irrigation",
+        "area": 5500,
+        "waterSaved": 40,
+        "status": "completed",
+        "year": 2023
+      },
+      {
+        "id": 2,
+        "name": "Highland Water Efficiency",
+        "type": "micro-sprinkler",
+        "area": 3200,
+        "waterSaved": 25,
+        "status": "ongoing",
+        "year": 2024
+      },
+      {
+        "id": 3,
+        "name": "Desert Reclamation Project",
+        "type": "drip-irrigation",
+        "area": 1800,
+        "waterSaved": 50,
+        "status": "planned",
+        "year": 2025
+      }
+    ],
+    "techniques": [
+      {
+        "name": "Drip Irrigation",
+        "efficiency": 90,
+        "area": 15000,
+        "waterSaving": 40
+      },
+      {
+        "name": "Micro-Sprinkler",
+        "efficiency": 85,
+        "area": 8500,
+        "waterSaving": 30
+      },
+      {
+        "name": "Deficit Irrigation",
+        "efficiency": 80,
+        "area": 6200,
+        "waterSaving": 25
+      }
+    ]
+  },
+  "verticalFarming": {
+    "totalFacilities": 12,
+    "totalArea": 2500,
+    "waterSavings": 85,
+    "yieldIncrease": 280,
+    "energyEfficiency": 65,
+    "facilities": [
+      {
+        "id": 1,
+        "name": "Amman Vertical Farm",
+        "area": 500,
+        "crops": ["lettuce", "herbs", "tomatoes"],
+        "technology": "LED-hydroponic",
+        "yearlyProduction": 450,
+        "status": "operational"
+      },
+      {
+        "id": 2,
+        "name": "Zarqa Smart Agriculture",
+        "area": 350,
+        "crops": ["strawberries", "peppers", "cucumbers"],
+        "technology": "aeroponic",
+        "yearlyProduction": 320,
+        "status": "operational"
+      },
+      {
+        "id": 3,
+        "name": "Irbid Innovation Center",
+        "area": 280,
+        "crops": ["herbs", "microgreens", "leafy-greens"],
+        "technology": "NFT-hydroponic",
+        "yearlyProduction": 250,
+        "status": "under-construction"
+      }
+    ],
+    "crops": [
+      {
+        "name": "Lettuce",
+        "yieldMultiplier": 15,
+        "growthTime": 35,
+        "waterReduction": 90
+      },
+      {
+        "name": "Herbs",
+        "yieldMultiplier": 20,
+        "growthTime": 28,
+        "waterReduction": 85
+      },
+      {
+        "name": "Tomatoes",
+        "yieldMultiplier": 8,
+        "growthTime": 75,
+        "waterReduction": 80
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "id": 1,
+      "name": "Olive Knot Disease",
+      "arabicName": "مرض عقد الزيتون",
+      "scientificName": "Pseudomonas savastanoi",
+      "type": "bacterial",
+      "severity": "high",
+      "affectedCrops": ["olive"],
+      "symptoms": [
+        "Galls on branches and twigs",
+        "Stunted growth",
+        "Reduced fruit production"
+      ],
+      "prevention": [
+        "Avoid wounds during pruning",
+        "Use sterilized tools",
+        "Remove infected branches"
+      ],
+      "treatment": [
+        "Copper-based fungicides",
+        "Proper sanitation",
+        "Resistant varieties"
+      ],
+      "prevalence": 25,
+      "economicImpact": "high"
+    },
+    {
+      "id": 2,
+      "name": "Tomato Late Blight",
+      "arabicName": "اللفحة المتأخرة للطماطم",
+      "scientificName": "Phytophthora infestans",
+      "type": "fungal",
+      "severity": "very-high",
+      "affectedCrops": ["tomato", "potato"],
+      "symptoms": [
+        "Dark lesions on leaves",
+        "White fungal growth",
+        "Fruit rot"
+      ],
+      "prevention": [
+        "Proper ventilation",
+        "Avoid overhead irrigation",
+        "Resistant varieties"
+      ],
+      "treatment": [
+        "Fungicide sprays",
+        "Remove infected plants",
+        "Improve drainage"
+      ],
+      "prevalence": 35,
+      "economicImpact": "very-high"
+    },
+    {
+      "id": 3,
+      "name": "Wheat Rust",
+      "arabicName": "صدأ القمح",
+      "scientificName": "Puccinia triticina",
+      "type": "fungal",
+      "severity": "high",
+      "affectedCrops": ["wheat", "barley"],
+      "symptoms": [
+        "Orange pustules on leaves",
+        "Yellowing of leaves",
+        "Reduced grain quality"
+      ],
+      "prevention": [
+        "Resistant varieties",
+        "Crop rotation",
+        "Early planting"
+      ],
+      "treatment": [
+        "Fungicide application",
+        "Remove crop residue",
+        "Field sanitation"
+      ],
+      "prevalence": 20,
+      "economicImpact": "high"
+    },
+    {
+      "id": 4,
+      "name": "Cucumber Mosaic Virus",
+      "arabicName": "فيروس موزاييك الخيار",
+      "scientificName": "CMV",
+      "type": "viral",
+      "severity": "medium",
+      "affectedCrops": ["cucumber", "tomato", "pepper"],
+      "symptoms": [
+        "Mosaic patterns on leaves",
+        "Stunted growth",
+        "Deformed fruits"
+      ],
+      "prevention": [
+        "Control aphid vectors",
+        "Remove infected plants",
+        "Use certified seeds"
+      ],
+      "treatment": [
+        "No direct treatment",
+        "Vector control",
+        "Plant removal"
+      ],
+      "prevalence": 15,
+      "economicImpact": "medium"
+    }
+  ],
+  "dashboard": {
+    "foodSecurityIndex": 68,
+    "agriculturalProductivity": 75,
+    "waterUseEfficiency": 72,
+    "soilHealth": 65,
+    "climateResilience": 58,
+    "marketAccess": 70,
+    "technologyAdoption": 45,
+    "farmerIncome": 62,
+    "exportGrowth": 12,
+    "sustainabilityScore": 63,
+    "innovationIndex": 52,
+    "monthlyData": [
+      {
+        "month": "January",
+        "production": 15000,
+        "exports": 8500,
+        "waterUsage": 450,
+        "temperature": 12
+      },
+      {
+        "month": "February",
+        "production": 18000,
+        "exports": 9200,
+        "waterUsage": 520,
+        "temperature": 15
+      },
+      {
+        "month": "March",
+        "production": 25000,
+        "exports": 12000,
+        "waterUsage": 680,
+        "temperature": 19
+      },
+      {
+        "month": "April",
+        "production": 35000,
+        "exports": 18000,
+        "waterUsage": 850,
+        "temperature": 24
+      },
+      {
+        "month": "May",
+        "production": 45000,
+        "exports": 25000,
+        "waterUsage": 1200,
+        "temperature": 29
+      },
+      {
+        "month": "June",
+        "production": 55000,
+        "exports": 32000,
+        "waterUsage": 1500,
+        "temperature": 33
+      },
+      {
+        "month": "July",
+        "production": 62000,
+        "exports": 38000,
+        "waterUsage": 1800,
+        "temperature": 35
+      },
+      {
+        "month": "August",
+        "production": 58000,
+        "exports": 35000,
+        "waterUsage": 1650,
+        "temperature": 34
+      },
+      {
+        "month": "September",
+        "production": 48000,
+        "exports": 28000,
+        "waterUsage": 1200,
+        "temperature": 30
+      },
+      {
+        "month": "October",
+        "production": 38000,
+        "exports": 22000,
+        "waterUsage": 950,
+        "temperature": 25
+      },
+      {
+        "month": "November",
+        "production": 28000,
+        "exports": 15000,
+        "waterUsage": 650,
+        "temperature": 18
+      },
+      {
+        "month": "December",
+        "production": 20000,
+        "exports": 11000,
+        "waterUsage": 480,
+        "temperature": 13
+      }
+    ],
+    "regionalData": [
+      {
+        "region": "Jordan Valley",
+        "area": 2500,
+        "production": 180000,
+        "crops": ["tomato", "cucumber", "potato", "citrus"],
+        "irrigationType": "drip",
+        "waterEfficiency": 85
+      },
+      {
+        "region": "Northern Highlands",
+        "area": 3200,
+        "production": 95000,
+        "crops": ["olive", "fig", "grape", "almond"],
+        "irrigationType": "rainfed",
+        "waterEfficiency": 60
+      },
+      {
+        "region": "Central Plateau",
+        "area": 2800,
+        "production": 75000,
+        "crops": ["wheat", "barley", "olive"],
+        "irrigationType": "mixed",
+        "waterEfficiency": 65
+      },
+      {
+        "region": "Eastern Desert",
+        "area": 1200,
+        "production": 15000,
+        "crops": ["barley", "rangeland"],
+        "irrigationType": "minimal",
+        "waterEfficiency": 40
+      }
+    ]
+  },
+  "sustainability": {
+    "organicFarming": {
+      "totalFarms": 145,
+      "certifiedArea": 2800,
+      "growthRate": 15,
+      "exportValue": 8500000
+    },
+    "waterConservation": {
+      "rainwaterHarvesting": 180,
+      "greyWaterReuse": 45,
+      "dripIrrigation": 15000,
+      "totalWaterSaved": 12000000
+    },
+    "soilConservation": {
+      "terracing": 8500,
+      "coverCrops": 3200,
+      "composting": 5800,
+      "soilTestingCenters": 12
+    },
+    "renewableEnergy": {
+      "solarFarms": 25,
+      "windPower": 5,
+      "biogas": 15,
+      "energySavings": 35
+    }
+  },
+  "research": {
+    "institutions": [
+      {
+        "name": "Jordan University Agricultural Research Center",
+        "focus": ["crop-breeding", "water-management", "soil-science"],
+        "projects": 45,
+        "budget": 2500000
+      },
+      {
+        "name": "National Center for Agricultural Research",
+        "focus": ["pest-management", "organic-farming", "climate-adaptation"],
+        "projects": 38,
+        "budget": 3200000
+      },
+      {
+        "name": "International Center for Biosaline Agriculture",
+        "focus": ["salt-tolerant-crops", "marginal-lands", "water-quality"],
+        "projects": 28,
+        "budget": 1800000
+      }
+    ],
+    "innovations": [
+      {
+        "name": "Salt-Tolerant Tomato Varieties",
+        "status": "field-testing",
+        "impact": "high",
+        "timeline": "2025-2027"
+      },
+      {
+        "name": "Smart Irrigation Sensors",
+        "status": "pilot-deployment",
+        "impact": "medium",
+        "timeline": "2024-2025"
+      },
+      {
+        "name": "Drought-Resistant Wheat",
+        "status": "laboratory",
+        "impact": "very-high",
+        "timeline": "2026-2030"
+      }
+    ]
+  },
+  "markets": {
+    "domestic": {
+      "size": 850000000,
+      "growth": 8,
+      "selfSufficiency": {
+        "fruits": 85,
+        "vegetables": 92,
+        "cereals": 15,
+        "overall": 45
+      }
+    },
+    "export": {
+      "totalValue": 128000000,
+      "growth": 12,
+      "destinations": [
+        {
+          "country": "Saudi Arabia",
+          "value": 35000000,
+          "products": ["tomato", "cucumber", "olive oil"]
+        },
+        {
+          "country": "UAE",
+          "value": 28000000,
+          "products": ["olive oil", "dates", "herbs"]
+        },
+        {
+          "country": "Kuwait",
+          "value": 22000000,
+          "products": ["vegetables", "citrus", "almonds"]
+        },
+        {
+          "country": "Iraq",
+          "value": 18000000,
+          "products": ["potato", "onion", "olive oil"]
+        },
+        {
+          "country": "Qatar",
+          "value": 15000000,
+          "products": ["organic vegetables", "herbs", "fruits"]
+        }
+      ]
+    },
+    "priceIndices": {
+      "vegetables": 125,
+      "fruits": 118,
+      "cereals": 135,
+      "oliveOil": 142,
+      "overall": 128
+    }
+  },
+  "climate": {
+    "zones": [
+      {
+        "name": "Mediterranean",
+        "area": 2500,
+        "rainfall": 400,
+        "temperature": 18,
+        "suitableCrops": ["olive", "grape", "fig", "almond"]
+      },
+      {
+        "name": "Semi-Arid",
+        "area": 15000,
+        "rainfall": 200,
+        "temperature": 22,
+        "suitableCrops": ["wheat", "barley", "chickpea"]
+      },
+      {
+        "name": "Arid",
+        "area": 65000,
+        "rainfall": 50,
+        "temperature": 25,
+        "suitableCrops": ["date palm", "rangeland"]
+      },
+      {
+        "name": "Jordan Valley",
+        "area": 2500,
+        "rainfall": 300,
+        "temperature": 24,
+        "suitableCrops": ["citrus", "banana", "vegetables"]
+      }
+    ],
+    "challenges": [
+      {
+        "name": "Water Scarcity",
+        "severity": "very-high",
+        "impact": "production-limited",
+        "solutions": ["efficient-irrigation", "water-recycling", "desalination"]
+      },
+      {
+        "name": "Temperature Rise",
+        "severity": "high",
+        "impact": "yield-reduction",
+        "solutions": ["heat-tolerant-varieties", "shade-systems", "cooling"]
+      },
+      {
+        "name": "Irregular Rainfall",
+        "severity": "high",
+        "impact": "crop-failure",
+        "solutions": ["irrigation", "water-storage", "drought-resistant-crops"]
+      },
+      {
+        "name": "Soil Degradation",
+        "severity": "medium",
+        "impact": "fertility-loss",
+        "solutions": ["organic-matter", "cover-crops", "terracing"]
+      }
+    ]
+  },
+  "technology": {
+    "adoption": {
+      "precisionAgriculture": 25,
+      "smartIrrigation": 35,
+      "drones": 15,
+      "sensors": 28,
+      "mobileApps": 45,
+      "onlinePlatforms": 38
+    },
+    "digitalPlatforms": [
+      {
+        "name": "Jordan Agricultural Information System",
+        "users": 12000,
+        "features": ["weather", "market-prices", "best-practices"]
+      },
+      {
+        "name": "Smart Farm Management",
+        "users": 3500,
+        "features": ["irrigation-control", "crop-monitoring", "yield-prediction"]
+      },
+      {
+        "name": "Agricultural Marketplace",
+        "users": 8500,
+        "features": ["direct-sales", "price-comparison", "logistics"]
+      }
+    ],
+    "startups": [
+      {
+        "name": "AgroTech Jordan",
+        "focus": "smart-irrigation",
+        "funding": 1200000,
+        "stage": "series-a"
+      },
+      {
+        "name": "Desert Bloom Technologies",
+        "focus": "vertical-farming",
+        "funding": 800000,
+        "stage": "seed"
+      },
+      {
+        "name": "Precision Agri Solutions",
+        "focus": "crop-monitoring",
+        "funding": 450000,
+        "stage": "pre-seed"
+      }
+    ]
+  },
+  "education": {
+    "institutions": [
+      {
+        "name": "Jordan University of Science and Technology",
+        "programs": ["agricultural-engineering", "plant-production", "animal-science"],
+        "students": 2500,
+        "researchBudget": 5000000
+      },
+      {
+        "name": "University of Jordan",
+        "programs": ["soil-science", "horticulture", "food-technology"],
+        "students": 1800,
+        "researchBudget": 3500000
+      },
+      {
+        "name": "Al-Balqa Applied University",
+        "programs": ["agricultural-technology", "irrigation", "farm-management"],
+        "students": 1200,
+        "researchBudget": 2000000
+      }
+    ],
+    "trainingPrograms": [
+      {
+        "name": "Modern Irrigation Techniques",
+        "participants": 1500,
+        "duration": "3-days",
+        "certification": true
+      },
+      {
+        "name": "Organic Farming Practices",
+        "participants": 850,
+        "duration": "5-days",
+        "certification": true
+      },
+      {
+        "name": "Greenhouse Management",
+        "participants": 650,
+        "duration": "1-week",
+        "certification": true
+      }
+    ]
+  }
+}

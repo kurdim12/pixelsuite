@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Health - Food Security Jordan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/diseases.css">
+    <meta name="description" content="Disease monitoring, prevention strategies, and integrated crop protection methods">
+    <meta name="theme-color" content="#226646">
+    <link rel="icon" type="image/svg+xml" href="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png">
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-brand" aria-label="Food Security Jordan - Home">
+                    <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="40" height="40" aria-hidden="true">
+                    <span>Food Security Jordan</span>
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="agriculture.html" class="nav-link" role="menuitem">Agriculture</a></li>
+                    <li role="none"><a href="irrigation.html" class="nav-link" role="menuitem">Irrigation</a></li>
+                    <li role="none"><a href="crops.html" class="nav-link" role="menuitem">Crops</a></li>
+                    <li role="none"><a href="vertical.html" class="nav-link" role="menuitem">Vertical Farming</a></li>
+                    <li role="none"><a href="diseases.html" class="nav-link active" role="menuitem" aria-current="page">Plant Health</a></li>
+                    <li role="none"><a href="dashboard.html" class="nav-link" role="menuitem">Dashboard</a></li>
+                    <li role="none"><a href="suggestions.html" class="nav-link" role="menuitem">Suggestions</a></li>
+                </ul>
+                
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Switch theme">
+                    <span class="theme-icon theme-icon-light">☀️</span>
+                    <span class="theme-icon theme-icon-dark">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" role="progressbar" aria-label="Page scroll progress">
+        <div class="progress-fill"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main role="main" id="main">
+        <!-- Hero Section -->
+        <section class="diseases-hero">
+            <div class="hero-background">
+                <img src="assets/img/jordan-valley-close-up-6-1536539.jpg" alt="" loading="eager" decoding="async" aria-hidden="true">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Plant Health Protection in 
+                        <span class="highlight">Jordan</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Advanced disease monitoring and integrated pest management strategies 
+                        to safeguard Jordan's agricultural productivity and food security.
+                    </p>
+                    <div class="health-metrics">
+                        <div class="metric-item">
+                            <span class="metric-number">85%</span>
+                            <span class="metric-label">Disease Prevention Rate</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-number">45</span>
+                            <span class="metric-label">Common Diseases Tracked</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-number">12</span>
+                            <span class="metric-label">Monitoring Stations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disease Categories -->
+        <section class="disease-categories track">
+            <div class="container">
+                <h2 class="section-title">Common Plant Diseases in Jordan</h2>
+                <p class="section-subtitle">
+                    Major disease threats affecting Jordan's agricultural crops and their management strategies
+                </p>
+
+                <div class="disease-filter">
+                    <button class="filter-btn active" data-category="all">All Diseases</button>
+                    <button class="filter-btn" data-category="fungal">Fungal</button>
+                    <button class="filter-btn" data-category="bacterial">Bacterial</button>
+                    <button class="filter-btn" data-category="viral">Viral</button>
+                    <button class="filter-btn" data-category="pest">Pest Damage</button>
+                </div>
+
+                <div class="diseases-grid" id="diseasesGrid">
+                    <!-- Disease cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Monitoring Systems -->
+        <section class="monitoring-systems track">
+            <div class="container">
+                <h2 class="section-title">Disease Monitoring Network</h2>
+                <p class="section-subtitle">
+                    Real-time surveillance and early warning systems across Jordan's agricultural regions
+                </p>
+
+                <div class="monitoring-overview">
+                    <div class="monitoring-map">
+                        <div class="map-container">
+                            <h3>Monitoring Stations</h3>
+                            <div class="jordan-map">
+                                <div class="station active" data-location="amman" style="top: 45%; left: 60%;">
+                                    <span class="station-dot"></span>
+                                    <span class="station-label">Amman</span>
+                                </div>
+                                <div class="station active" data-location="irbid" style="top: 20%; left: 45%;">
+                                    <span class="station-dot"></span>
+                                    <span class="station-label">Irbid</span>
+                                </div>
+                                <div class="station active" data-location="jordan-valley" style="top: 35%; left: 35%;">
+                                    <span class="station-dot"></span>
+                                    <span class="station-label">Jordan Valley</span>
+                                </div>
+                                <div class="station active" data-location="karak" style="top: 65%; left: 55%;">
+                                    <span class="station-dot"></span>
+                                    <span class="station-label">Karak</span>
+                                </div>
+                                <div class="station active" data-location="mafraq" style="top: 25%; left: 70%;">
+                                    <span class="station-dot"></span>
+                                    <span class="station-label">Mafraq</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monitoring-data">
+                        <h3>Current Status</h3>
+                        <div class="status-cards">
+                            <div class="status-card low">
+                                <div class="status-icon">🟢</div>
+                                <div class="status-info">
+                                    <span class="status-level">Low Risk</span>
+                                    <span class="status-count">8 regions</span>
+                                </div>
+                            </div>
+                            <div class="status-card medium">
+                                <div class="status-icon">🟡</div>
+                                <div class="status-info">
+                                    <span class="status-level">Medium Risk</span>
+                                    <span class="status-count">3 regions</span>
+                                </div>
+                            </div>
+                            <div class="status-card high">
+                                <div class="status-icon">🔴</div>
+                                <div class="status-info">
+                                    <span class="status-level">High Risk</span>
+                                    <span class="status-count">1 region</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="recent-alerts">
+                            <h4>Recent Alerts</h4>
+                            <div class="alert-list">
+                                <div class="alert-item">
+                                    <span class="alert-severity medium">Medium</span>
+                                    <span class="alert-disease">Powdery Mildew</span>
+                                    <span class="alert-location">Jordan Valley</span>
+                                    <span class="alert-time">2 hours ago</span>
+                                </div>
+                                <div class="alert-item">
+                                    <span class="alert-severity low">Low</span>
+                                    <span class="alert-disease">Aphid Activity</span>
+                                    <span class="alert-location">Irbid</span>
+                                    <span class="alert-time">6 hours ago</span>
+                                </div>
+                                <div class="alert-item">
+                                    <span class="alert-severity high">High</span>
+                                    <span class="alert-disease">Late Blight</span>
+                                    <span class="alert-location">Karak</span>
+                                    <span class="alert-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatment Guide -->
+        <section class="treatment-guide track">
+            <div class="container">
+                <h2 class="section-title">Treatment & Prevention Guide</h2>
+                <p class="section-subtitle">
+                    Integrated pest management strategies combining biological, cultural, and chemical controls
+                </p>
+
+                <div class="treatment-tabs">
+                    <button class="tab-button active" data-tab="prevention">Prevention</button>
+                    <button class="tab-button" data-tab="biological">Biological Control</button>
+                    <button class="tab-button" data-tab="chemical">Chemical Treatment</button>
+                    <button class="tab-button" data-tab="cultural">Cultural Practices</button>
+                </div>
+
+                <div class="treatment-content">
+                    <div class="tab-panel active" id="prevention">
+                        <h3>Prevention Strategies</h3>
+                        <div class="prevention-methods">
+                            <div class="method-card">
+                                <div class="method-icon">🌱</div>
+                                <h4>Crop Rotation</h4>
+                                <p>Strategic rotation breaks disease cycles and reduces pathogen buildup in soil.</p>
+                                <div class="method-benefits">
+                                    <span class="benefit">Breaks disease cycles</span>
+                                    <span class="benefit">Improves soil health</span>
+                                    <span class="benefit">Reduces pesticide needs</span>
+                                </div>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon">🌿</div>
+                                <h4>Resistant Varieties</h4>
+                                <p>Planting disease-resistant crop varieties reduces infection risk by 60-80%.</p>
+                                <div class="method-benefits">
+                                    <span class="benefit">Natural resistance</span>
+                                    <span class="benefit">Reduced treatments</span>
+                                    <span class="benefit">Higher yields</span>
+                                </div>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-icon">💧</div>
+                                <h4>Water Management</h4>
+                                <p>Proper irrigation timing and drainage prevents fungal diseases and root rot.</p>
+                                <div class="method-benefits">
+                                    <span class="benefit">Reduces humidity</span>
+                                    <span class="benefit">Prevents overwatering</span>
+                                    <span class="benefit">Improves air circulation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="biological">
+                        <h3>Biological Control Methods</h3>
+                        <div class="biological-agents">
+                            <div class="agent-card">
+                                <h4>Beneficial Insects</h4>
+                                <p>Natural predators that control pest populations without chemical intervention.</p>
+                                <div class="agent-examples">
+                                    <div class="example">
+                                        <span class="example-name">Ladybugs</span>
+                                        <span class="example-target">Control aphids</span>
+                                    </div>
+                                    <div class="example">
+                                        <span class="example-name">Parasitic Wasps</span>
+                                        <span class="example-target">Control caterpillars</span>
+                                    </div>
+                                    <div class="example">
+                                        <span class="example-name">Predatory Mites</span>
+                                        <span class="example-target">Control spider mites</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agent-card">
+                                <h4>Beneficial Microorganisms</h4>
+                                <p>Microbes that suppress plant pathogens and enhance plant immunity.</p>
+                                <div class="agent-examples">
+                                    <div class="example">
+                                        <span class="example-name">Bacillus subtilis</span>
+                                        <span class="example-target">Fungal diseases</span>
+                                    </div>
+                                    <div class="example">
+                                        <span class="example-name">Trichoderma</span>
+                                        <span class="example-target">Root diseases</span>
+                                    </div>
+                                    <div class="example">
+                                        <span class="example-name">Pseudomonas</span>
+                                        <span class="example-target">Bacterial diseases</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="chemical">
+                        <h3>Chemical Treatment Options</h3>
+                        <div class="chemical-guide">
+                            <div class="treatment-category">
+                                <h4>Fungicides</h4>
+                                <div class="chemical-list">
+                                    <div class="chemical-item">
+                                        <span class="chemical-name">Copper-based</span>
+                                        <span class="chemical-use">Broad spectrum fungal control</span>
+                                        <span class="chemical-timing">Preventive application</span>
+                                    </div>
+                                    <div class="chemical-item">
+                                        <span class="chemical-name">Triazoles</span>
+                                        <span class="chemical-use">Powdery mildew, rusts</span>
+                                        <span class="chemical-timing">Early infection stages</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="treatment-category">
+                                <h4>Insecticides</h4>
+                                <div class="chemical-list">
+                                    <div class="chemical-item">
+                                        <span class="chemical-name">Neem oil</span>
+                                        <span class="chemical-use">Soft-bodied insects</span>
+                                        <span class="chemical-timing">Weekly applications</span>
+                                    </div>
+                                    <div class="chemical-item">
+                                        <span class="chemical-name">Spinosad</span>
+                                        <span class="chemical-use">Caterpillars, thrips</span>
+                                        <span class="chemical-timing">Upon detection</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="cultural">
+                        <h3>Cultural Control Practices</h3>
+                        <div class="cultural-practices">
+                            <div class="practice-section">
+                                <h4>Sanitation Practices</h4>
+                                <ul class="practice-list">
+                                    <li>Remove infected plant debris immediately</li>
+                                    <li>Disinfect tools between plants</li>
+                                    <li>Control weeds that harbor pests</li>
+                                    <li>Maintain clean greenhouse environments</li>
+                                </ul>
+                            </div>
+                            <div class="practice-section">
+                                <h4>Timing & Spacing</h4>
+                                <ul class="practice-list">
+                                    <li>Plant at optimal spacing for air circulation</li>
+                                    <li>Time planting to avoid peak disease periods</li>
+                                    <li>Harvest crops at proper maturity</li>
+                                    <li>Rotate planting locations annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disease Database -->
+        <section class="disease-database track">
+            <div class="container">
+                <h2 class="section-title">Disease Identification Tool</h2>
+                <p class="section-subtitle">
+                    Interactive tool to identify common plant diseases and get treatment recommendations
+                </p>
+
+                <div class="identification-tool">
+                    <div class="tool-steps">
+                        <div class="step active" data-step="1">
+                            <span class="step-number">1</span>
+                            <span class="step-label">Select Crop</span>
+                        </div>
+                        <div class="step" data-step="2">
+                            <span class="step-number">2</span>
+                            <span class="step-label">Symptoms</span>
+                        </div>
+                        <div class="step" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-label">Diagnosis</span>
+                        </div>
+                        <div class="step" data-step="4">
+                            <span class="step-number">4</span>
+                            <span class="step-label">Treatment</span>
+                        </div>
+                    </div>
+
+                    <div class="tool-content">
+                        <div class="step-content active" id="step-1">
+                            <h3>Select Your Crop Type</h3>
+                            <div class="crop-selection">
+                                <button class="crop-btn" data-crop="tomato">Tomatoes</button>
+                                <button class="crop-btn" data-crop="olive">Olives</button>
+                                <button class="crop-btn" data-crop="wheat">Wheat</button>
+                                <button class="crop-btn" data-crop="cucumber">Cucumbers</button>
+                                <button class="crop-btn" data-crop="pepper">Peppers</button>
+                                <button class="crop-btn" data-crop="citrus">Citrus</button>
+                            </div>
+                        </div>
+
+                        <div class="step-content" id="step-2">
+                            <h3>Describe the Symptoms</h3>
+                            <div class="symptom-checklist">
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="leaf-spots">
+                                    <span class="checkmark"></span>
+                                    Leaf spots or lesions
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="yellowing">
+                                    <span class="checkmark"></span>
+                                    Yellowing leaves
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="wilting">
+                                    <span class="checkmark"></span>
+                                    Wilting or drooping
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="white-powder">
+                                    <span class="checkmark"></span>
+                                    White powdery coating
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="holes">
+                                    <span class="checkmark"></span>
+                                    Holes in leaves
+                                </label>
+                                <label class="symptom-item">
+                                    <input type="checkbox" name="symptoms" value="stunted-growth">
+                                    <span class="checkmark"></span>
+                                    Stunted growth
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="step-content" id="step-3">
+                            <h3>Probable Diagnosis</h3>
+                            <div class="diagnosis-results">
+                                <div class="diagnosis-card">
+                                    <h4>Most Likely Disease</h4>
+                                    <div class="disease-match">
+                                        <span class="disease-name" id="primary-disease">Powdery Mildew</span>
+                                        <span class="confidence-score" id="confidence">85% match</span>
+                                    </div>
+                                    <p class="disease-description" id="disease-desc">
+                                        Fungal disease causing white powdery coating on leaves and stems.
+                                    </p>
+                                </div>
+                                <div class="alternative-diagnoses">
+                                    <h4>Other Possibilities</h4>
+                                    <div class="alt-disease">Downy Mildew (65% match)</div>
+                                    <div class="alt-disease">Bacterial Blight (45% match)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-content" id="step-4">
+                            <h3>Treatment Recommendations</h3>
+                            <div class="treatment-plan">
+                                <div class="immediate-actions">
+                                    <h4>Immediate Actions</h4>
+                                    <ul class="action-list" id="immediate-actions">
+                                        <li>Remove affected leaves immediately</li>
+                                        <li>Improve air circulation around plants</li>
+                                        <li>Apply sulfur-based fungicide</li>
+                                    </ul>
+                                </div>
+                                <div class="long-term-management">
+                                    <h4>Long-term Management</h4>
+                                    <ul class="action-list" id="long-term-actions">
+                                        <li>Plant resistant varieties next season</li>
+                                        <li>Adjust watering schedule</li>
+                                        <li>Monitor weekly for recurrence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-navigation">
+                        <button class="nav-btn prev" id="prevStep" disabled>Previous</button>
+                        <button class="nav-btn next" id="nextStep">Next</button>
+                        <button class="nav-btn restart" id="restartTool" style="display: none;">Start Over</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="diseases-cta track">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Protect Your Crops</h2>
+                    <p>
+                        Get expert advice on plant health management and access our comprehensive disease monitoring network. 
+                        Join Jordan's integrated pest management program for healthier, more productive crops.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="suggestions.html" class="btn btn-primary">
+                            <span class="btn-icon">🔬</span>
+                            Get Expert Consultation
+                        </a>
+                        <a href="dashboard.html" class="btn btn-secondary">
+                            <span class="btn-icon">📊</span>
+                            View Disease Reports
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/img/ChatGPT Image Sep 27, 2025, 02_25_21 PM.png" alt="" width="32" height="32" aria-hidden="true">
+                        <h3>Food Security Jordan</h3>
+                    </div>
+                    <p>Advancing sustainable agriculture and food security across Jordan through innovation, collaboration, and data-driven insights.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="agriculture.html">Agriculture Systems</a></li>
+                        <li><a href="crops.html">Crop Database</a></li>
+                        <li><a href="dashboard.html">Data Dashboard</a></li>
+                        <li><a href="suggestions.html">Suggestions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="irrigation.html">Irrigation Methods</a></li>
+                        <li><a href="vertical.html">Vertical Farming</a></li>
+                        <li><a href="diseases.html">Plant Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Data Sources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.moa.gov.jo/">Ministry of Agriculture</a></li>
+                        <li><a href="https://www.mwi.gov.jo/">Jordan Valley Authority</a></li>
+                        <li><a href="https://www.narc.gov.jo/">Agricultural Research Centers</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Food Security Jordan. All rights reserved.</p>
+                    <div class="footer-meta">
+                        <span>Built with sustainability in mind</span>
+                        <span>•</span>
+                        <button class="footer-accessibility" aria-label="Accessibility options">Accessibility</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/diseases.js"></script>
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+</body>
+</html>
